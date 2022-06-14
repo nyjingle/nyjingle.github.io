@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nyjingle.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="MR 技术概念辨析；主流 VR 一体机扫描。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VR, AR, what is MR?">
+<meta property="og:url" content="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/index.html">
+<meta property="og:site_name" content="Nothing but Blogging">
+<meta property="og:description" content="MR 技术概念辨析；主流 VR 一体机扫描。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg">
+<meta property="og:image" content="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4P81F?ver=a732&q=90&m=2&h=768&w=1024&b=%23FFFFFFFF">
+<meta property="og:image" content="https://www.pico-interactive.com/cn/neo3/_nuxt/img/home_vr.a986968.png">
+<meta property="og:image" content="https://www.vive.com/media/filer_public/fed-assets/sunrise/images/1920-pdp-top-banner.jpg">
+<meta property="article:published_time" content="2022-05-19T02:07:11.000Z">
+<meta property="article:modified_time" content="2022-05-19T05:37:28.697Z">
+<meta property="article:author" content="Jun Jing">
+<meta property="article:tag" content="VR一体机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg">
+
+
+<link rel="canonical" href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/","path":"2022/05/19/VR-AR-what-is-MR/","title":"VR, AR, what is MR?"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VR, AR, what is MR? | Nothing but Blogging</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nothing but Blogging</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">千古兴亡多少事？悠悠。不尽长江滚滚流。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-download fa-fw"></i>resources</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">技术概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">参考资料：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93"><span class="nav-number">1.2.</span> <span class="nav-text">概念总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%B4%E6%98%BE%E8%AE%BE%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">头显设备</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jun Jing"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Jun Jing</p>
+  <div class="site-description" itemprop="description">Learning, Thinking & Doing</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nyjingle" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nyjingle" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:nyjingle@gmail.com" title="E-Mail → mailto:nyjingle@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://freecomputerbooks.com/" title="https:&#x2F;&#x2F;freecomputerbooks.com&#x2F;" rel="noopener" target="_blank">FreeComputerBooks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Jun Jing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nothing but Blogging">
+      <meta itemprop="description" content="Learning, Thinking & Doing">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="VR, AR, what is MR? | Nothing but Blogging">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VR, AR, what is MR?
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-05-19 10:07:11 / Modified: 13:37:28" itemprop="dateCreated datePublished" datetime="2022-05-19T10:07:11+08:00">2022-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/VR-AR-MR/" itemprop="url" rel="index"><span itemprop="name">VR/AR/MR</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>3 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>MR 技术概念辨析；主流 VR 一体机扫描。</p>
+<span id="more"></span>
+
+<h1 id="技术概念"><a href="#技术概念" class="headerlink" title="技术概念"></a>技术概念</h1><h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ol>
+<li><p>B站视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KV411B7yG">搞不清楚AR、VR、MR，看这一个视频就够了</a> <code>(发布日期：2021-02-04)</code></p>
+<blockquote>
+<ul>
+<li>微软 MR：<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/hololens/">HoloLens</a></li>
+<li>中国初创公司 Nreal：<a target="_blank" rel="noopener" href="https://www.nreal.ai/specs/">Nreal Glasses</a></li>
+<li>美国初创公司 <a href="magicleap.com">Magic Leap</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p>知乎帖子：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/47165132/answer/2325054132">现在世界上有较为成熟的 MR（混合现实）设备吗？</a> <code>(发布日期：2022-01-26)</code></p>
+<blockquote>
+<p>MR这个东西，简单来说就是能够在虚拟和现实之间自由切换。MR混合现实是在虚拟现实和增强现实之间存在的一种奇妙的过渡形态。</p>
+<blockquote>
+<p>微软的HoloLens，是MR混合现实。HoloLens可以完全改变当前人物所处的场景空间。<br>MagicLeap的鲸鱼跳出水面，和小恐龙从桌面跳到地上，这个都属于AR范畴。</p>
+</blockquote>
+<p>要是这个“物理空间交互就是MR”的观点成立，那就不存在AR和MR之间的界限之分了，AR完全可以取代MR。<br>是否是MR？ 取决于是否能够完成空间级别的运算，以及在空间中，自由选择是否保留虚拟和现实内容。<br>有些像AR技术的SDK或者是眼镜硬件产品，连遮挡物前后位置关系都解决不了，虚拟内容覆盖连改变一个房间都做不到，就不能算MR了。</p>
+<p>我<em>与Rokid、影创、Nreal、亮亮视野</em>为代表的国内几家AR眼镜公司的创始人，都有过深刻的对话。<br>可以说MR就是影响AR和VR硬件兼具<em>沉浸感体验</em>和<em>全场景使用</em>的关键所在。</p>
+<p>但随着时间会慢慢和微软，以及未来将会入场的苹果，在光学、云渲染、电池等技术上不断的突破，大家可能最终将具备MR性能的AR眼镜做得像普通眼镜一样轻薄。</p>
+<p>VR眼镜See-through方案色彩还原的问题，现在用户在使用时基本上还都是黑白色。而微软HoloLens这类基于AR眼镜实现的MR混合现实，又存在色彩半透明的问题，沉浸感则不够。</p>
+<p>标题答案：无。</p>
+</blockquote>
+</li>
+<li><p>B站视频：<a href="bilibili.com/video/BV1o54y1v7Dt">VR AR MR 傻傻分不清楚</a> <code>(2020-07-28)</code></p>
+<blockquote>
+<p>参考2所批判的那个主流（<del>错误</del>）观点：“物理空间交互就是MR”。</p>
+</blockquote>
+</li>
+<li><p>Wikipeida：<a href="en.wikipedia.org/wiki/Mixed_reality">Mixed reality</a></p>
+<blockquote>
+<p><strong>Mixed reality (MR)</strong> is the merging of real and virtual worlds to produce new environments and visualizations, where physical and digital objects co-exist and interact in real time. </p>
+<p>To mark the difference: <strong>Augmented reality</strong> takes place in the physical world, with information or objects added virtually like an overlay; <strong>Virtual Reality</strong> immerged you in a fully virtual world without the intervention of the physical world.</p>
+<p>维基百科的解释也很“主流”。</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结"></a>概念总结</h2><p>MR的技术概念目前还存在较大的模糊性，介于VR和AR之间，而未有清晰明确的界定。也即技术上处于发展初期，百家争鸣未有胜出者，尚不太成熟。</p>
+<p>主流观点（如wikipeida）认为：</p>
+<ul>
+<li>VR：全虚拟世界（对真实世界不介入）；</li>
+<li>AR：在真实世界上叠加一些信息或虚拟对象；</li>
+<li>MR：真实世界和虚拟世界相融合，以产生全新的环境和视觉体验，真实物理对象和虚拟数字对象共存其间并能实时交互。</li>
+</ul>
+<p>MR的核心：真实物理对象和虚拟数字对象之间的交互作用。</p>
+<h1 id="头显设备"><a href="#头显设备" class="headerlink" title="头显设备"></a>头显设备</h1><blockquote>
+<p>头显：VR head show，即虚拟现实头戴式显示设备；别名：VR眼镜、VR头盔。</p>
+</blockquote>
+<p>按使用环境，VR 头显设备分为：</p>
+<ul>
+<li>VR 一体机：<blockquote>
+<p>是具备独立处理器的 VR 头显，具备了独立运算、输入和输出的功能。功能不如 PC VR 头显强大，但是没有连线束缚，自由度更高。</p>
+</blockquote>
+</li>
+<li>PC VR 头显：<blockquote>
+<p>也称外接头戴式设备，内置显示屏且需要PC、PS4等主机使用，是目前公认用户体验感最好的VR设备。主要面向B端，比如 VR 体验馆等地方。参考：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1674346778557588760">XR科普之——PC VR：体验感优秀，但价格偏高</a>。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>一体机</strong>扫描：</p>
+<blockquote>
+<p>2022年3月21日，国际数据公司（IDC）发布了《全球AR&#x2F;VR头显季度报告》。文中指出，2021年AR&#x2F;VR头显市场同比增长92.1%，出货量达到了1120万台。其中，Meta旗下的Quest 2占据了78%的份额，也就是870万台之多。而字节跳动旗下的VR品牌Pico以4.5%的份额排在了第三位，推算了下，大约是50万台。</p>
+</blockquote>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://store.facebook.com/quest/products/quest-2">Oculus Quest2</a> VR眼镜 一体机：扎克伯格把 Facebook 改名为 Meta 后，此款产品在官网已改名叫 <strong>Meta Quest2</strong> 了。应该是目前全球范围内最受欢迎，生态最好的 VR 消费设备；国内使用因网络原因收到一定限制。</p>
+<blockquote>
+<p>Hundreds of hit games, one-of-a-kind experiences and a growing community awaits you on Meta Quest 2.</p>
+<p>历史：Oculus是美国的虚拟现实头戴设备制造商，创立于2012年，2014年被Facebook收购。</p>
+<img src="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg" width = "500"  div align=center />
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/hololens/">HoloLens 2</a>：微软的头戴式 AR&#x2F;MR 设备。和 Quest 面向消费者用户不同，微软的 HoloLens 目前只面向行业用户，比如与美国陆军的合同——<a target="_blank" rel="noopener" href="https://www.geekpark.net/news/276144">你一直看不上的 MR 头显，却一次出货 200 亿美元</a>。</p>
+<blockquote>
+<p>不受线缆束缚的独立全息设备，采用符合人体工程学的设计，具有企业级应用程序，可提高用户准确性和输出。</p>
+ <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4P81F?ver=a732&q=90&m=2&h=768&w=1024&b=%23FFFFFFFF" width = "500"  div align=center />
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.pico-interactive.com/cn/neo3/">pico neo3</a>：硬件参数与 Oculus Quest2 基本一致的国产 VR 一体机。</p>
+<blockquote>
+<p>6DoF VR 一体机；全新一代自研光学定位系统，安全区更广、识别更精准。<br>作为采用高通骁龙 XR2 平台的全新一代 6DoF VR 一体机， Pico Neo 3 拥有强大的数据处理能力和硬件驱动能力。轻松实现了 4K 级别的高清屏幕分辨率，带来更加细腻真实的视觉感受。同时，自研的 6DoF 定位追踪算法配合丰富的光学传感器，不仅拥有超低延迟，而且空间定位更精准。无论玩游戏还是看 视频，用户的 VR 体验都更上一层楼。</p>
+<p>Pico是北京小鸟看看科技有限公司旗下品牌，成立于2015年4月。2021年8月，Pico发布全员信，披露已被<strong>字节</strong>收购，将被并入字节VR相关业务线。</p>
+<img src="https://www.pico-interactive.com/cn/neo3/_nuxt/img/home_vr.a986968.png" width = "500"  div align=center />
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.vive.com/cn/product/vive-focus3/overview">VIVE Focus 3</a>：HTC 最新款 VR 一体机，高端，大气，贵。</p>
+<blockquote>
+<p>屏幕: 双2.88英寸LCD屏幕<br>分辨率：单眼分辨率2448 x 2448（双眼分辨率4896 x 2448）<br>刷新率：90 Hz<br>视场角：最大120度<br>处理器：高通®骁龙™XR2<br>数据存储器和内存：128GB &#x2F; 8GB，支持最高2TB microSD卡<br>传感器：</p>
+<ul>
+<li>追踪摄像头x4</li>
+<li>G-sensor校正</li>
+<li>陀螺仪</li>
+<li>距离传感器</li>
+</ul>
+<p>VIVE 或 HTC Vive 是 HTC 公司的虚拟现实品牌。 It consists of hardware like its titular virtual reality headsets and accessories, virtual reality software and services, and initiatives that promote applications of virtual reality in sectors like business and arts.<br><img src="https://www.vive.com/media/filer_public/fed-assets/sunrise/images/1920-pdp-top-banner.jpg" width = "500"  div align=center /></p>
+</blockquote>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Jun Jing
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/" title="VR, AR, what is MR?">https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/VR%E4%B8%80%E4%BD%93%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> VR一体机</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/14/%E8%80%83%E5%AF%9F%E4%B8%80%E4%B8%8B%E5%AE%98%E6%96%B9%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B1%BB%E8%80%83%E8%AF%95/" rel="prev" title="考察一下官方的计算机类考试">
+                  <i class="fa fa-chevron-left"></i> 考察一下官方的计算机类考试
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/05/20/MarkDown%E4%B9%8B%E4%B8%80%EF%BC%9A%E6%BA%AF%E6%BA%90%E4%B8%8E%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" rel="next" title="MarkDown之一：溯源与基础学习">
+                  MarkDown之一：溯源与基础学习 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jun Jing</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>Symbols count total: </span>
+    <span title="Symbols count total">97k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>Reading time total &asymp;</span>
+    <span title="Reading time total">1:28</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
