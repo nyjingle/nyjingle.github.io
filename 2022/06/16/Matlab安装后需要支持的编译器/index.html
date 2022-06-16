@@ -21,33 +21,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nyjingle.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="MR 技术概念辨析；主流 VR 一体机扫描。">
+    <meta name="description" content="今天（2022-6-16）在Win10系统新装最新版 Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。 安装完毕后提示：您的安装可能需要额外的配置步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VR, AR, what is MR?">
-<meta property="og:url" content="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/index.html">
+<meta property="og:title" content="Matlab安装后需要支持的编译器">
+<meta property="og:url" content="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/index.html">
 <meta property="og:site_name" content="Nothing but Blogging">
-<meta property="og:description" content="MR 技术概念辨析；主流 VR 一体机扫描。">
+<meta property="og:description" content="今天（2022-6-16）在Win10系统新装最新版 Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。 安装完毕后提示：您的安装可能需要额外的配置步骤。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg">
-<meta property="og:image" content="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4P81F?ver=a732&q=90&m=2&h=768&w=1024&b=%23FFFFFFFF">
-<meta property="og:image" content="https://www.pico-interactive.com/cn/neo3/_nuxt/img/home_vr.a986968.png">
-<meta property="og:image" content="https://www.vive.com/media/filer_public/fed-assets/sunrise/images/1920-pdp-top-banner.jpg">
-<meta property="article:published_time" content="2022-05-19T02:07:11.000Z">
-<meta property="article:modified_time" content="2022-06-16T11:09:47.483Z">
+<meta property="article:published_time" content="2022-06-16T10:07:42.000Z">
+<meta property="article:modified_time" content="2022-06-16T10:35:19.974Z">
 <meta property="article:author" content="Jun Jing">
-<meta property="article:tag" content="VR一体机">
+<meta property="article:tag" content="Matlab">
+<meta property="article:tag" content="编译器">
+<meta property="article:tag" content="MinGW">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg">
 
 
-<link rel="canonical" href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/">
+<link rel="canonical" href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/","path":"2022/05/19/VR-AR-what-is-MR/","title":"VR, AR, what is MR?"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/","path":"2022/06/16/Matlab安装后需要支持的编译器/","title":"Matlab安装后需要支持的编译器"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>VR, AR, what is MR? | Nothing but Blogging</title>
+<title>Matlab安装后需要支持的编译器 | Nothing but Blogging</title>
   
 
 
@@ -150,7 +147,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">技术概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.1.</span> <span class="nav-text">参考资料：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93"><span class="nav-number">1.2.</span> <span class="nav-text">概念总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%B4%E6%98%BE%E8%AE%BE%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">头显设备</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.</span> <span class="nav-text">需求确认</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E5%99%A8-mingw"><span class="nav-number">2.</span> <span class="nav-text">第三方编译器 MinGW</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#interfaces-to-other-languages"><span class="nav-number">3.</span> <span class="nav-text">Interfaces to Other
+Languages</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -233,7 +231,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/">
+    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -246,12 +244,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="VR, AR, what is MR? | Nothing but Blogging">
+      <meta itemprop="name" content="Matlab安装后需要支持的编译器 | Nothing but Blogging">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          VR, AR, what is MR?
+          Matlab安装后需要支持的编译器
         </h1>
 
         <div class="post-meta-container">
@@ -261,15 +259,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-05-19 10:07:11" itemprop="dateCreated datePublished" datetime="2022-05-19T10:07:11+08:00">2022-05-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-06-16 19:09:47" itemprop="dateModified" datetime="2022-06-16T19:09:47+08:00">2022-06-16</time>
+      <time title="Created: 2022-06-16 18:07:42 / Modified: 18:35:19" itemprop="dateCreated datePublished" datetime="2022-06-16T18:07:42+08:00">2022-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,11 +269,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/VR-AR-MR/" itemprop="url" rel="index"><span itemprop="name">VR/AR/MR</span></a>
+          <a href="/categories/Communications/Skills/" itemprop="url" rel="index"><span itemprop="name">Skills</span></a>
         </span>
     </span>
 
@@ -292,7 +284,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>2.9k</span>
+      <span>3.2k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -310,143 +302,137 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>MR 技术概念辨析；主流 VR 一体机扫描。</p>
-<span id="more"></span>
-<h1 id="技术概念">技术概念</h1>
-<h2 id="参考资料">参考资料：</h2>
-<ol type="1">
-<li><p>B站视频：<a
-target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KV411B7yG">搞不清楚AR、VR、MR，看这一个视频就够了</a>
-<code>(发布日期：2021-02-04)</code></p>
+        <p>今天（2022-6-16）在Win10系统新装最新版
+Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。</p>
+<p>安装完毕后提示：您的安装可能需要额外的配置步骤。 <span id="more"></span></p>
 <blockquote>
+<p>要加快以下产品的计算速度，需要<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>：</p>
 <ul>
-<li>微软 MR：<a
-target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/hololens/">HoloLens</a></li>
-<li>中国初创公司 Nreal：<a target="_blank" rel="noopener" href="https://www.nreal.ai/specs/">Nreal
-Glasses</a></li>
-<li>美国初创公司 <a href="magicleap.com">Magic Leap</a></li>
+<li>Fixed-Point Designer</li>
+<li>SimBiology</li>
 </ul>
-</blockquote></li>
-<li><p>知乎帖子：<a
-target="_blank" rel="noopener" href="https://www.zhihu.com/question/47165132/answer/2325054132">现在世界上有较为成熟的
-MR（混合现实）设备吗？</a> <code>(发布日期：2022-01-26)</code></p>
-<blockquote>
-<p>MR这个东西，简单来说就是能够在虚拟和现实之间自由切换。MR混合现实是在虚拟现实和增强现实之间存在的一种奇妙的过渡形态。
-&gt;
-微软的HoloLens，是MR混合现实。HoloLens可以完全改变当前人物所处的场景空间。
-&gt;
-MagicLeap的鲸鱼跳出水面，和小恐龙从桌面跳到地上，这个都属于AR范畴。</p>
-<p>要是这个“物理空间交互就是MR”的观点成立，那就不存在AR和MR之间的界限之分了，AR完全可以取代MR。
-是否是MR？
-取决于是否能够完成空间级别的运算，以及在空间中，自由选择是否保留虚拟和现实内容。
-有些像AR技术的SDK或者是眼镜硬件产品，连遮挡物前后位置关系都解决不了，虚拟内容覆盖连改变一个房间都做不到，就不能算MR了。</p>
-<p>我<em>与Rokid、影创、Nreal、亮亮视野</em>为代表的国内几家AR眼镜公司的创始人，都有过深刻的对话。
-可以说MR就是影响AR和VR硬件兼具<em>沉浸感体验</em>和<em>全场景使用</em>的关键所在。</p>
-<p>但随着时间会慢慢和微软，以及未来将会入场的苹果，在光学、云渲染、电池等技术上不断的突破，大家可能最终将具备MR性能的AR眼镜做得像普通眼镜一样轻薄。</p>
-<p>VR眼镜See-through方案色彩还原的问题，现在用户在使用时基本上还都是黑白色。而微软HoloLens这类基于AR眼镜实现的MR混合现实，又存在色彩半透明的问题，沉浸感则不够。</p>
-<p>标题答案：无。</p>
-</blockquote></li>
-<li><p>B站视频：<a href="bilibili.com/video/BV1o54y1v7Dt">VR AR MR
-傻傻分不清楚</a> <code>(2020-07-28)</code></p>
-<blockquote>
-<p>参考2所批判的那个主流（<del>错误</del>）观点：“物理空间交互就是MR”。</p>
-</blockquote></li>
-<li><p>Wikipeida：<a href="en.wikipedia.org/wiki/Mixed_reality">Mixed
-reality</a></p>
-<blockquote>
-<p><strong>Mixed reality (MR)</strong> is the merging of real and
-virtual worlds to produce new environments and visualizations, where
-physical and digital objects co-exist and interact in real time.</p>
-<p>To mark the difference: <strong>Augmented reality</strong> takes
-place in the physical world, with information or objects added virtually
-like an overlay; <strong>Virtual Reality</strong> immerged you in a
-fully virtual world without the intervention of the physical world.</p>
-<p>维基百科的解释也很“主流”。</p>
-</blockquote></li>
-</ol>
-<hr />
-<h2 id="概念总结">概念总结</h2>
-<p>MR的技术概念目前还存在较大的模糊性，介于VR和AR之间，而未有清晰明确的界定。也即技术上处于发展初期，百家争鸣未有胜出者，尚不太成熟。</p>
-<p>主流观点（如wikipeida）认为：</p>
+<p>以下产品需要<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>:</p>
 <ul>
-<li>VR：全虚拟世界（对真实世界不介入）；</li>
-<li>AR：在真实世界上叠加一些信息或虚拟对象；</li>
-<li>MR：真实世界和虚拟世界相融合，以产生全新的环境和视觉体验，真实物理对象和虚拟数字对象共存其间并能实时交互。</li>
+<li>Embedded Coder</li>
+<li>MATLAB Coder</li>
+<li>Simulink Coder</li>
 </ul>
-<p>MR的核心：真实物理对象和虚拟数字对象之间的交互作用。</p>
-<h1 id="头显设备">头显设备</h1>
-<p>头显：VR head
-show，即虚拟现实头戴式显示设备；别名：VR眼镜、VR头盔。</p>
-<p>按使用环境，VR 头显设备分为：</p>
+<p>MATLAB Compiler 需要<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>来创建
+Excel 加载项。</p>
+<p>MATLAB Compiler SDK 要求安装以下程序:</p>
 <ul>
-<li>VR 一体机： &gt; 是具备独立处理器的 VR
-头显，具备了独立运算、输入和输出的功能。功能不如 PC VR
-头显强大，但是没有连线束缚，自由度更高。</li>
-<li>PC VR 头显： &gt;
-也称外接头戴式设备，内置显示屏且需要PC、PS4等主机使用，是目前公认用户体验感最好的VR设备。主要面向B端，比如
-VR 体验馆等地方。参考：<a
-target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1674346778557588760">XR科普之——PC
-VR：体验感优秀，但价格偏高</a>。</li>
+<li><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">.NET
+framework</a>，用于创建与 Excel 集成的 .NET 程序集和可部署的存档</li>
+<li><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>，用于创建
+COM 组件、C 和 C++ 共享库</li>
+<li><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/language-interfaces.html">Java
+JDK</a>，用于创建 Java 包</li>
 </ul>
-<p><strong>一体机</strong>扫描：</p>
-<blockquote>
-<p>2022年3月21日，国际数据公司（IDC）发布了《全球AR/VR头显季度报告》。文中指出，2021年AR/VR头显市场同比增长92.1%，出货量达到了1120万台。其中，Meta旗下的Quest
-2占据了78%的份额，也就是870万台之多。而字节跳动旗下的VR品牌Pico以4.5%的份额排在了第三位，推算了下，大约是50万台。</p>
 </blockquote>
+<h1 id="需求确认">需求确认</h1>
+<p>分析一下，目前、或将来可能会需要：</p>
 <ul>
-<li><p><a
-target="_blank" rel="noopener" href="https://store.facebook.com/quest/products/quest-2">Oculus
-Quest2</a> VR眼镜 一体机：扎克伯格把 Facebook 改名为 Meta
-后，此款产品在官网已改名叫 <strong>Meta Quest2</strong>
-了。应该是目前全球范围内最受欢迎，生态最好的 VR
-消费设备；国内使用因网络原因收到一定限制。</p>
-<blockquote>
-<p>Hundreds of hit games, one-of-a-kind experiences and a growing
-community awaits you on Meta Quest 2.</p>
-<p>历史：Oculus是美国的虚拟现实头戴设备制造商，创立于2012年，2014年被Facebook收购。
-<img src="https://pic1.zhimg.com/v2-113a8fc81f1e5abcd5bdacff09098846_1440w.jpg" width = "500"  div align=center /></p>
-</blockquote></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/hololens/">HoloLens
-2</a>：微软的头戴式 AR/MR 设备。和 Quest 面向消费者用户不同，微软的
-HoloLens 目前只面向行业用户，比如与美国陆军的合同——<a
-target="_blank" rel="noopener" href="https://www.geekpark.net/news/276144">你一直看不上的 MR
-头显，却一次出货 200 亿美元</a>。 &gt;
-不受线缆束缚的独立全息设备，采用符合人体工程学的设计，具有企业级应用程序，可提高用户准确性和输出。
-<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4P81F?ver=a732&q=90&m=2&h=768&w=1024&b=%23FFFFFFFF" width = "500"  div align=center /></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.pico-interactive.com/cn/neo3/">pico
-neo3</a>：硬件参数与 Oculus Quest2 基本一致的国产 VR 一体机。</p>
-<blockquote>
-<p>6DoF VR 一体机；全新一代自研光学定位系统，安全区更广、识别更精准。
-作为采用高通骁龙 XR2 平台的全新一代 6DoF VR 一体机， Pico Neo 3
-拥有强大的数据处理能力和硬件驱动能力。轻松实现了 4K
-级别的高清屏幕分辨率，带来更加细腻真实的视觉感受。同时，自研的 6DoF
-定位追踪算法配合丰富的光学传感器，不仅拥有超低延迟，而且空间定位更精准。无论玩游戏还是看
-视频，用户的 VR 体验都更上一层楼。</p>
-<p>Pico是北京小鸟看看科技有限公司旗下品牌，成立于2015年4月。2021年8月，Pico发布全员信，披露已被<strong>字节</strong>收购，将被并入字节VR相关业务线。</p>
-</blockquote></li>
+<li>加快计算速度（Fixed-Point Designer）</li>
+<li>Embedded Coder、MATLAB Coder、Simulink Coder</li>
+<li>创建 COM 组件、C 和 C++ 共享库</li>
 </ul>
-<p><img src="https://www.pico-interactive.com/cn/neo3/_nuxt/img/home_vr.a986968.png" width = "500"  div align=center /></p>
+<p>上述提示中的链接最终指向两个目标：</p>
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">Supported
+and Compatible Compilers</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/language-interfaces.html">Interfaces
+to Other Languages</a></li>
+</ol>
+<p>从中寻找需要的编译器和辅助程序。</p>
+<h1 id="第三方编译器-mingw">第三方编译器 MinGW</h1>
+<p>A number of MathWorks products or product features require that you
+have a third-party compiler installed on your system. The tables below
+outline the compilers that are supported by various MathWorks products.
+These compilers are provided by a number of vendors and are available
+under a variety of commercial, academic, or open source terms; visit the
+providers' websites for further information.</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/nyjingle/MarkdownPhotos/master/blog2022/matlab_complier_win.png"
+alt="Matlab Complier" />
+<figcaption aria-hidden="true">Matlab Complier</figcaption>
+</figure>
+<p>显然，MATLAB Product Family 是推荐选用 <code>MinGW 6.3 C/C++</code>
+的；</p>
+<p>另 <code>MinGW 6.3 C/C++</code> 对 Simulink Product Family
+的支持极其全面： - Simulink: For S-Function compilation - Simulink: For
+Model Referencing, Accelerator mode, Rapid Accelerator mode, and MATLAB
+Function blocks - <strong>Stateflow</strong>: For all features -
+<strong>Simulink Coder</strong>: For all features - Embedded Coder: When
+targeting the host OS - SerDes Toolbox: For IBIS-AMI model
+generation</p>
+<p><code>MinGW 6.3 C/C++</code> 对 MATLAB Compiler 的支持： - MATLAB
+Compiler: Excel add-in for desktop - MATLAB Compiler SDK: C/C++ - MATLAB
+Compiler SDK: COM &gt; 不支持MATLAB Compiler SDK: .NET（需要 Microsoft
+Visual C++）</p>
+<p><code>MinGW 6.3 C/C++</code> 的下载链接引导到：<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-compiler">MATLAB
+Support for MinGW-w64 C/C++ Compiler</a></p>
+<p>MinGW-w64 is a compiler suite for Windows based on the GNU tool
+chain. It includes a GCC compiler and related tools for compiling C and
+C++ applications for Windows. C and C++ applications compiled with
+MinGW-w64 GCC can be called from MATLAB using MEX. This GCC compiler can
+also be helpful for other MathWorks products that require a C or C++
+compiler.</p>
+<p>真正下载链接：<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/mlc-downloads/downloads/submissions/52848/versions/22/download/mlpkginstall">download</a>
+Select the download button, above, then double click on the file or drag
+it into the MATLAB Command Window to install.</p>
+<p>一个16KB的文件<code>mingw.mlpkginstall</code>，双击（Win10系统已经注册过该类文件为<code>MATLAB Support Package Installer</code>），打开Matlab的<code>附加功能管理器</code>，安装。
+&gt; 需登录Matlab账号验证，以在线下载所需资源。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MATLAB Support for MinGW-w64 C/C++ Compiler 版本  22.1.0</span><br><span class="line">第三方软件:</span><br><span class="line">MinGW 6.3.0 from MinGW-w64.org</span><br></pre></td></tr></table></figure> This
+Add-On installs one of the following versions of MinGW GCC based on your
+version of MATLAB: MATLAB version | MinGW version | For more information
+--- | --- | --- R2018b and later | GCC 6.3 | http://mingw-w64.org</p>
+<p>完毕，命令行验证 OK。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; mex -setup</span><br><span class="line">MEX 配置为使用 <span class="string">&#x27;MinGW64 Compiler (C)&#x27;</span> 以进行 C 语言编译。</span><br><span class="line"></span><br><span class="line">要选择不同的语言，请从以下选项中选择一种命令:</span><br><span class="line"> mex -setup C++ </span><br><span class="line"> mex -setup FORTRAN</span><br></pre></td></tr></table></figure></p>
+<h1 id="interfaces-to-other-languages">Interfaces to Other
+Languages</h1>
+<p>其他语言接口。</p>
+<p>MATLAB®, MATLAB Production Server, and its add-on products are
+compatible with the following versions of other programming languages.
+For information about which versions of Python are compatible with
+previous releases of MATLAB, see Versions of Python Compatible With
+MATLAB Products by Release. For more information, see <a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/products/matlab/matlab-and-other-programming-languages.html">Using
+MATLAB with Other Languages</a>.</p>
+<p>与其他编程语言结合，包含三种途径：一是从其他语言调用 Matlab （Engine
+API）；二是从 Matlab
+调用其他语言（编写的库）或<code>system components</code>；三是通过
+MATLAB Compiler and MATLAB Compiler SDK 打包成其他语言的组件。</p>
+<p>支持语言包括：</p>
 <ul>
-<li><p><a
-target="_blank" rel="noopener" href="https://www.vive.com/cn/product/vive-focus3/overview">VIVE Focus
-3</a>：HTC 最新款 VR 一体机，高端，大气，贵。</p>
-<blockquote>
-屏幕: 双2.88英寸LCD屏幕 分辨率：单眼分辨率2448 x 2448（双眼分辨率4896 x
-2448） 刷新率：90 Hz 视场角：最大120度 处理器：高通®骁龙™XR2
-数据存储器和内存：128GB / 8GB，支持最高2TB microSD卡 传感器：
-<ul>
-<li>追踪摄像头x4</li>
-<li>G-sensor校正</li>
-<li>陀螺仪</li>
-<li>距离传感器</li>
+<li>C - All versions prior to 11</li>
+<li>C - Version 11 （不支持从Matlab调用）<br />
+</li>
+<li>C++ - All versions prior to 11</li>
+<li>C++ - Version 11</li>
+<li>C++ - Version 14</li>
+<li>Fortran - All versions<br />
+</li>
+<li>Python 2.7 | 3.7 | 3.8 | 3.9</li>
+<li>.COM components and apps - all versions<br />
+</li>
+<li>Java 8 (Oracle Java)</li>
+<li>Java 8 (OpenJDK) （不支持从Matlab调用）</li>
+<li>.NET Framework CLR version 2.0 | 4.0 （不支持调用Matlab）</li>
+<li>HTTP 1.1 （不支持调用Matlab）<br />
+</li>
+<li>Perl 5.32.1（不支持调用Matlab）</li>
 </ul>
-<p>VIVE 或 HTC Vive 是 HTC 公司的虚拟现实品牌。 It consists of hardware
-like its titular virtual reality headsets and accessories, virtual
-reality software and services, and initiatives that promote applications
-of virtual reality in sectors like business and arts.
-<img src="https://www.vive.com/media/filer_public/fed-assets/sunrise/images/1920-pdp-top-banner.jpg" width = "500"  div align=center /></p>
-</blockquote></li>
-</ul>
+<p>此外，Matlab Coder | Embedded Coder | Simulink Coder 支持将 Matlab |
+Simulink 转换为其他语言代码。</p>
 
     </div>
 
@@ -466,7 +452,7 @@ of virtual reality in sectors like business and arts.
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/" title="VR, AR, what is MR?">https://nyjingle.github.io/2022/05/19/VR-AR-what-is-MR/</a>
+      <a href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/" title="Matlab安装后需要支持的编译器">https://nyjingle.github.io/2022/06/16/Matlab安装后需要支持的编译器/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -475,21 +461,20 @@ of virtual reality in sectors like business and arts.
 </div>
 
           <div class="post-tags">
-              <a href="/tags/VR%E4%B8%80%E4%BD%93%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> VR一体机</a>
+              <a href="/tags/Matlab/" rel="tag"><i class="fa fa-tag"></i> Matlab</a>
+              <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 编译器</a>
+              <a href="/tags/MinGW/" rel="tag"><i class="fa fa-tag"></i> MinGW</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/05/14/%E8%80%83%E5%AF%9F%E4%B8%80%E4%B8%8B%E5%AE%98%E6%96%B9%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B1%BB%E8%80%83%E8%AF%95/" rel="prev" title="考察一下官方的计算机类考试">
-                  <i class="fa fa-chevron-left"></i> 考察一下官方的计算机类考试
+                <a href="/2022/06/14/A-%E7%B1%BB%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%EF%BC%88%E4%BC%9A%E8%AE%AE%EF%BC%89%E7%9B%AE%E5%BD%95/" rel="prev" title="A 类学术期刊（会议）目录">
+                  <i class="fa fa-chevron-left"></i> A 类学术期刊（会议）目录
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/05/20/MarkDown%E4%B9%8B%E4%B8%80%EF%BC%9A%E6%BA%AF%E6%BA%90%E4%B8%8E%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" rel="next" title="MarkDown之一：溯源与基础学习">
-                  MarkDown之一：溯源与基础学习 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
