@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>MarkDown之二：标准化考虑</title>
+      <link href="/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/"/>
+      <url>/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/</url>
+      
+        <content type="html"><![CDATA[<p>Markdown 是否需要标准化？这是个颇具争议的问题。有人反对（如 Markdown发明人），有人致力于此（CommonMark）。事实是，目前 Markdown并未达成标准，不同组织的 Markdown 源文件在渲染为 HTML时存在各种各样的差异（风格）。</p><p>但写作者适应某个渲染工具的成本并不高，很容易就可调整过来。</p><span id="more"></span><blockquote></blockquote><ol type="1"><li><a href="https://daringfireball.net/projects/markdown/"title="MarkDown Author">JOHN GRUBER</a>：发明人的MarkDown官方站点</li><li><a href="https://zh.wikipedia.org/wiki/Markdown"title="WikiPedia MarkDown">Markdown 维基</a>：维基百科（中文）</li><li><a href="https://www.markdownguide.org/"title="Markdown Guide">Markdown 指南</a>：关于MarkDown的一切</li><li><a href="https://markdown.github.io/"title="Markdown Community Page">MarkdownCommunity</a>：GitHub上的MarkDown社区</li><li><a href="https://www.jianshu.com/p/079b9e370acc">Markdown简介</a>：简书上一篇介绍，稍显啰嗦</li><li><ahref="https://commonmark.org/">CommonMark</a>：MarkDown标准化规范</li><li><a href="https://github.github.com/gfm/">GFM</a>：GitHub FlavoredMarkdown Spec | Github风格Markdown规范</li></ol><h1 id="标准化">标准化</h1><p>随着时间的推移，出现了许多Markdown实现。非正式规范中的一些含糊不清引起了人们的注意，促使Markdown解析器的一些开发人员努力实现标准化。</p><p>从 2012 年开始， Markdown 的粉丝提出了一个标准的、明确的 Markdown语法规范，以及一套全面的测试，用来验证 Markdown 实现是否规范。但是由于<a href="https://daringfireball.net/projects/markdown/"title="MarkDown Author">John Gruber</a> 极力反对标准化，所以不能使用Markdown 这个名字，改为了 CommonMark。</p><blockquote><p>格鲁伯：“不同的网站（和人们）有不同的需求。没有一种语法可以让所有人满意。”“ Because different sites (and people) have different needs. No onesyntax would make all happy.”</p></blockquote><h2 id="概述">概述</h2><p><strong><a href="https://commonmark.org/">CommonMark</a></strong>奠定了 Markdown 标准化基础。</p><p>2016 年 3 月，IETF<code>【Internet Engineering Task Force | 国际互联网工程任务组】</code>发布了 RFC 7763 和 RFC 7764。<code>【RFC，Request For Comments】</code>RFC 7763 从原始变体引入了 MIME<code>【Multipurpose Internet Mail Extensions | 多用途互联网邮件扩展】</code>类型 text/markdown。RFC 7764 讨论并注册了<em>MultiMarkdown</em>、<em>GitHub Flavored Markdown(GFM)</em>、<em>Pandoc</em>、<em>CommonMark</em> 及 <em>Markdown</em>等变体。能收录进 RFC，即正式承认了 Markdown 为互联网标准。</p><p>2017 年，GitHub 发布了基于 CommonMark 的 <strong>GitHub FlavoredMarkdown（<a href="https://github.github.com/gfm/">GFM</a>）</strong>的正式规范，并且使用 Markdown 作为默认的格式化写作语言。GFM除了表格、删除线、自动链接和任务列表被 GitHub规范作为扩展添加之外，它遵循 CommonMark 规范。这个规范更加肯定了Markdown 的作用，推动了 Markdown 的发展，是目前最流行的 Markdown标准。因为 Github 用户庞大，大多数平台和软件都向他看齐，纷纷使用GFM。</p><blockquote><p>Markdown 令人很困惑的一点是，实际上每个 Markdown应用都实现了有点差别的 Markdown 版本（因为 Markdown一直没有官方标准），这些不同的 Markdown 风格叫做<strong>Flavor</strong>。</p></blockquote><blockquote><p>直到 CommanMark 和 GFM发布后，大部分应用都是以这两个规范为标准。所以学习前要弄清楚 Markdown应用所支持的Flavor，一般通过查看应用的帮助文档或者使用手册可以知道。比如通过 Typora的说明文档就知道它支持 GFM；有道云笔记的 Markdown 应该也是基于 GFM。</p></blockquote><blockquote><p><a href="pandoc.org">Pandoc</a> 源于输出目标格式的多元化（非单一HTML），其 Markdown 并不是基于 CommonMark 或 GFM。</p></blockquote><h2 id="变体1commonmark">变体1：<ahref="https://commonmark.org/">CommonMark</a></h2><p>We propose a standard, unambiguous syntax specification<code>【标准且无歧义的语法规范】</code> for Markdown, along with a suiteof comprehensive tests to validate Markdown implementations against thisspecification. <code>【对 Markdown 规范性的测试】</code> We believe thisis necessary, even essential, for the future of Markdown.</p><p>The current version of the CommonMark spec(https://spec.commonmark.org/current) is quite robust after many yearsof public feedback.<code>【2020年4月，当前最新版本：0.30 @ 2021-6-19】</code></p><p>The following sites and projects have adopted CommonMark:</p><ul><li><p><a href="https://www.discourse.org/">Discourse</a>: Discourse isthe 100% open source discussion platform built for the next decade ofthe Internet. Use it as a mailing list, discussion forum, long-form chatroom, and more!</p><blockquote><p>Discourse 是 Jeff Atwood推出的一个新的开源论坛项目，摒弃了传统论坛的话题讨论形式、拥有自学习系统、全Web应用同时适用于桌面和移动终端。基于Ruby on Rails 和 Ember.js 开发，数据库使用 PostgreSQL 和 Redis。Discourse is a from-scratch reboot, an attempt to reimagine what amodern Internet discussion forum should be today, in a world ofubiquitous smartphones, tablets, Facebook, and Twitter.</p></blockquote></li><li><p>GitHub：github.com</p></li><li><p>GitLab | 极狐：gitlab.com | gitlab.cn</p><blockquote><p>GitLab 是一个使用 <em>MIT 许可证</em>的基于网络的Git仓库管理工具，且具有 wiki 和 issue跟踪功能，使用Git作为代码管理工具，并在此基础上搭建起来的web服务。2022年2月消息，极狐（GitLab）正式宣布推出极狐GitLab SaaS（JihuLab.com），为中国用户提供从源代码托管到开发运维的全栈式一体化DevOpsSaaS平台与企业级专家咨询服务。</p></blockquote></li><li><p>Reddit: reddit.com</p><blockquote><p>Reddit is home to thousands of communities, endless conversation, andauthentic human connection. Whether you're into breaking news, sports,TV fan theories, or a never-ending stream of the internet's cutestanimals, there's a community on Reddit for you.</p></blockquote></li><li><p>Qt: qt.io是一个跨平台的C++应用程序开发框架。广泛用于开发GUI程序，也可用于控制台工具和服务器。Qt使用标准的C++和特殊的代码生成扩展（称为元对象编译器（MetaObject Compiler, moc））以及一些宏。</p><blockquote><strong>The Productivity Platform for the Future</strong><ul><li>Next generation user experience with limitless scalability.</li><li>Qt is designed for producing cutting-edge software experiences inrecord-breaking times.</li></ul><strong>Design, Develop &amp; Deploy User Interfaces andApplications</strong><ul><li>Qt is the fastest and smartest way to produce industry-leadingsoftware that users love.</li><li>Target embedded, desktop, and mobile platforms with the same codebase for all.</li></ul></blockquote></li><li><p>Stack Overflow / Stack Exchange: stackoverflow.com</p><blockquote><p>Stack Overflow 一个程序设计领域的问答网站。 Stack Exchange是一系列问答网站，每一个网站包含不同领域的问题。这些网站参考StackOverflow，一个关于程序设计的问答网站，也是StackExchange的第一个成员。</p></blockquote></li><li><p>Swift: swift.org编程语言，支持多编程范式和编译式，用来撰写基于macOS/OSX、iOS、iPadOS、watchOS和tvOS的软件。苹果公司于2014年发布了Swift，让Swift与Objective-C共存在苹果公司的操作系统上。</p><blockquote><p>苹果宣称Swift的特点是：快速、现代、安全、互动，而且明显优于Objective-C语言。</p><p>Swift取消了Objective-C的指针和其他不安全访问的使用，舍弃了ObjectiveC早期套用Smalltalk风格的语法，全面改为句点表示法（dot-notation）。Swift具备类型推导（typeinference）。同时，它提供了类似C++、C#中的名字空间（namespace）、泛型（generic）、运算符重载（operatoroverloading）。Swift被简单的形容为 “没有C的Objective-C”（Objective-Cwithout the C）</p><p>Swift is a general-purpose programming language built using a modernapproach to safety, performance, and software design patterns. Swift isintended as a replacement for C-based languages (C, C++, andObjective-C).</p></blockquote></li></ul><h2 id="变体2gfm">变体2：<ahref="https://github.github.com/gfm/">GFM</a></h2><p>GitHub Flavored Markdown, often shortened as GFM, is the<em>dialect</em> <code>【方言】</code> of Markdown that is currentlysupported for user content on GitHub.com and GitHub Enterprise.</p><p>This formal specification, based on the <ahref="https://commonmark.org/">CommonMark</a> Spec, defines the syntaxand <em>semantics</em> <code>【语义】</code> of this dialect.</p><p>GFM is a strict superset of CommonMark. All the features which aresupported in GitHub user content and that are not specified on theoriginal CommonMark Spec are hence known as <strong>extensions</strong>,and highlighted as such.<code>【GFM是CommonMark的超集，包含若干扩展（extensions）。】</code></p><h2 id="markdown-为何需要标准规范">Markdown 为何需要标准规范</h2><blockquote><p>参考 GFM 文档</p></blockquote><p>John Gruber’s canonical description <code>【规范描述】</code> ofMarkdown’s syntax does not specify the syntax unambiguously. Here aresome examples of questions it does not answer:</p><ol type="1"><li><p><code>【子列表需要多少缩进量】</code>How much indentation isneeded for a sublist? The spec says that continuation paragraphs need tobe indented four spaces, but is not fully explicit about sublists. It isnatural to think that they, too, must be indented four spaces, but<code>Markdown.pl</code> does not require that. This is hardly a “cornercase”<code>【极端情况】</code>, and divergences between implementationson this issue often lead to surprises for users in realdocuments.</p></li><li><p><code>【块引用或标题前是否需要空行】</code>Is a blank line neededbefore a block quote or heading? Most implementations do not require theblank line. However, this can lead to unexpected results in hard-wrappedtext <code>【硬换行文本】</code>, and also to ambiguities in parsing(note that some implementations put the heading inside the blockquote,while others do not).</p></li><li><p><code>【缩进码块前是否需要空行】</code> Is a blank line neededbefore an indented code block? (Markdown.pl requires it, but this is notmentioned in the documentation, and some implementations do not requireit.)</p></li><li><p><code>【列表项目被包含仅&lt;p&gt;标签的确切规则】</code> What isthe exact rule for determining when list items get wrapped in &lt;p&gt;tags? Can a list be partially “loose” and partially “tight”? What shouldwe do with a list like this?</p><blockquote><pre><code>1. one2. two3. three</code></pre><p>Or this?</p><pre><code>1.  one    - a    - b2.  two</code></pre></blockquote></li><li><p><code>【列表符号是否可以缩进？有序列表符号可右对齐？】</code> Canlist markers be indented? Can ordered list markers be right-aligned?</p><blockquote><pre><code> 8. item 1 9. item 210. item 2a</code></pre></blockquote></li><li><p><code>【主题中断的逻辑模糊】</code> Is this one list with athematic break <code>【主题中断】</code> in its second item, or twolists separated by a thematic break?</p><blockquote><pre><code>* a* * * * ** b</code></pre></blockquote></li><li><p><code>【列表符号由有序改为无序引起的模糊】</code> When listmarkers change from numbers to bullets, do we have two lists or one?(The Markdown syntax description suggests two, but the perl scripts andmany other implementations produce one.)</p><blockquote><pre><code>1. fee2. fie-  foe-  fum</code></pre></blockquote></li><li><p><code>【内联结构标记的优先规则是什么】</code> What are theprecedence rules for the markers of inline structure? For example, isthe following a valid link, or does the code span take precedence ?</p><blockquote><pre><code>[a backtick (`)](/url) and [another backtick (`)](/url).</code></pre></blockquote></li><li><p><code>【强调标记的优先规则是什么】</code> What are the precedencerules for markers of emphasis and strong emphasis? For example, howshould the following be parsed?</p><blockquote><pre><code>*foo *bar* baz*</code></pre></blockquote></li><li><p><code>【块级和内敛结构优先规则是什么】</code> What are theprecedence rules between block-level and inline-level structure? Forexample, how should the following be parsed?</p><blockquote><pre><code>- `a long code span can contain a hyphen like this  - and it can screw things up`</code></pre></blockquote></li><li><p><code>【列表项是否可包含章节标题】</code> Can list items includesection headings? (<code>Markdown.pl</code> does not allow this, butdoes allow blockquotes to include headings.)</p><blockquote><pre><code>- # Heading</code></pre></blockquote></li><li><p><code>【列表项可否为空】</code> Can list items be empty?</p><blockquote><pre><code>* a * * b </code></pre></blockquote></li><li><p><code>【引用块或列表项中是否可以定义链接引用】</code> Can linkreferences be defined inside block quotes or list items?</p><blockquote><pre><code>&gt; Blockquote [foo].&gt;&gt; [foo]: /url</code></pre></blockquote></li><li><p><code>【同一参考有多个定义，优先级规则是什么】</code> If thereare multiple definitions for the same reference, which takesprecedence?</p><blockquote><pre><code>[foo]: /url1[foo]: /url2[foo][]</code></pre></blockquote></li></ol><p>Because there is no unambiguous spec, implementations have divergedconsiderably.</p><p>As a result, users are often surprised to find that a document thatrenders one way on one system (say, a GitHub wiki) renders differentlyon another (say, converting to docbook using pandoc).</p><h1 id="gfm-约定-gfm-preliminaries">GFM 约定 | GFM Preliminaries</h1><h2 id="字符和行-characters-and-lines">字符和行 | Characters andlines</h2><p>Any sequence of characters is a valid CommonMark document. A<strong>character</strong> is a ==Unicode== code point.<code>【character（字符）的定义】</code></p><p>This spec does not specify an encoding; it <strong>thinks of lines ascomposed of characters rather than bytes</strong>. A conforming parsermay be limited to a certain encoding.</p><p>A <strong>line</strong> is a sequence of zero or more charactersother than newline (<code>U+000A换行符</code>) or carriage return(<code>U+000D回车符</code>), followed by a line ending or by the end offile. <code>【line（行）的定义】</code></p><p>A <strong>line ending</strong> is a newline (U+000A), a carriagereturn (U+000D) not followed by a newline, or a carriage return and afollowing newline. <code>【line ending（行结尾）的定义】</code></p><p>A line containing no characters, or a line containing only spaces(U+0020) or tabs (U+0009), is called a <strong>blank line</strong>.<code>【blank line（空行）的定义】</code></p><p>A <strong>whitespace character</strong> is a space (U+0020), tab(U+0009), newline (U+000A), line tabulation (U+000B), form feed(U+000C), or carriage return (U+000D).<code>【whitespace character（空白字符）的定义：空格、制表符、换行符、行制表符、换页符、回车符】</code>&gt; tab (U+0009)又称common tab, horizontal tabulation (HT) or charactertabulation; line tabulation (U+000B) 又称 vertical tabulation (VT)</p><p><strong>Whitespace</strong> is a sequence of one or more whitespacecharacters.<code>【whitespace（空白）的定义】</code></p><p>A <strong>Unicode whitespace character</strong> is any code point inthe Unicode Zs <code>【Separator, Space】</code> general category, or atab (U+0009), carriage return (U+000D), newline (U+000A), or form feed(U+000C).</p><p><strong>Unicode whitespace</strong> is a sequence of one or moreUnicode whitespace characters.</p><p>A <strong>space</strong> is U+0020.</p><p>A <strong>non-whitespace character</strong> is any character that isnot a whitespace character.</p><p>An <strong>ASCII punctuation character</strong><code>【标点字符】</code> is<code>!, ", #, $, %, &amp;, ', (, ), *, +, ,, -, ., / (U+0021–2F), :, ;, &lt;, =, &gt;, ?, @ (U+003A–0040), [, \, ], ^, _, ``  (U+005B–0060), &#123;, |, &#125;, or ~ (U+007B–007E)</code>.</p><p>A <strong>punctuation character</strong> is an ASCII punctuationcharacter or anything in the general Unicode categoriesPc<code>【Punctuation, Connector】</code>, Pd<code>【Punctuation, Dash】</code>, Pe<code>【Punctuation, Close】</code>, Pf<code>【Punctuation, Final quote】</code>, Pi<code>【Punctuation, Initial quote】</code>, Po<code>【Punctuation, Other】</code>, or Ps<code>【Punctuation, Open】</code>.</p><h2 id="制表符-tabs">制表符 | Tabs</h2><p>Tabs in lines are not expanded to spaces. However, in contexts wherewhitespace helps to define block structure, tabs behave as if they werereplaced by spaces with a tab stop of 4 characters.</p><p>Thus, for example, a tab can be used instead of four spaces in anindented code block. (Note, however, that internal tabs are passedthrough as literal tabs, not expanded to spaces.)<code>【缩进时，tab相当于4个spaces；行内，tab为其字面量】</code></p><p>Normally the <code>&gt;</code> that begins a block quote may befollowed optionally by a space, which is not considered part of thecontent. In the following case <code>&gt;</code> is followed by a tab,which is treated as if it were expanded into three spaces. Since one ofthese spaces is considered part of the delimiter, foo is considered tobe indented six spaces inside the block quote context, so we get anindented code block starting with two spaces.<code>【2个tab跟在&gt;后面，相当于7个spaces，第1个看作是界定符&gt;的一部分，第2~5个共4个spaces开启一个码块，最终码块内容前含2个spaces】</code></p><blockquote><pre><code>  foo</code></pre></blockquote><h2 id="不安全字符-insecure-characters">不安全字符 | Insecurecharacters</h2><p>For security reasons, the Unicode character U+0000 must be replacedwith the REPLACEMENT CHARACTER (U+FFFD).</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software </category>
+          
+          <category> Skills </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CCSDS标准的建立和演变</title>
       <link href="/2022/06/23/CCSDS%E6%A0%87%E5%87%86%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%92%8C%E6%BC%94%E5%8F%98/"/>
       <url>/2022/06/23/CCSDS%E6%A0%87%E5%87%86%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%92%8C%E6%BC%94%E5%8F%98/</url>
@@ -146,11 +173,11 @@
             
             <tag> node.js </tag>
             
-            <tag> git </tag>
-            
             <tag> next </tag>
             
             <tag> hexo </tag>
+            
+            <tag> git </tag>
             
             <tag> github </tag>
             
@@ -320,11 +347,11 @@
             
             <tag> node.js </tag>
             
+            <tag> hexo </tag>
+            
             <tag> git </tag>
             
             <tag> blog </tag>
-            
-            <tag> hexo </tag>
             
             <tag> github </tag>
             
@@ -357,11 +384,11 @@
             
             <tag> node.js </tag>
             
+            <tag> hexo </tag>
+            
             <tag> git </tag>
             
             <tag> blog </tag>
-            
-            <tag> hexo </tag>
             
             <tag> github </tag>
             
@@ -394,11 +421,11 @@
             
             <tag> node.js </tag>
             
+            <tag> hexo </tag>
+            
             <tag> git </tag>
             
             <tag> blog </tag>
-            
-            <tag> hexo </tag>
             
             <tag> github </tag>
             

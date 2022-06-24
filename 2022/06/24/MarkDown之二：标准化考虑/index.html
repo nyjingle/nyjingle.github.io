@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nyjingle.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Markdown 是否需要标准化？这是个颇具争议的问题。有人反对（如 Markdown 发明人），有人致力于此（CommonMark）。事实是，目前 Markdown 并未达成标准，不同组织的 Markdown 源文件在渲染为 HTML 时存在各种各样的差异（风格）。 但写作者适应某个渲染工具的成本并不高，很容易就可调整过来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MarkDown之二：标准化考虑">
+<meta property="og:url" content="https://nyjingle.github.io/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/index.html">
+<meta property="og:site_name" content="Nothing but Blogging">
+<meta property="og:description" content="Markdown 是否需要标准化？这是个颇具争议的问题。有人反对（如 Markdown 发明人），有人致力于此（CommonMark）。事实是，目前 Markdown 并未达成标准，不同组织的 Markdown 源文件在渲染为 HTML 时存在各种各样的差异（风格）。 但写作者适应某个渲染工具的成本并不高，很容易就可调整过来。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-24T08:44:45.000Z">
+<meta property="article:modified_time" content="2022-06-24T09:24:24.635Z">
+<meta property="article:author" content="Jun Jing">
+<meta property="article:tag" content="markdown">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nyjingle.github.io/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/","path":"2022/06/24/MarkDown之二：标准化考虑/","title":"MarkDown之二：标准化考虑"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>MarkDown之二：标准化考虑 | Nothing but Blogging</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nothing but Blogging</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">千古兴亡多少事？悠悠。不尽长江滚滚流。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-download fa-fw"></i>resources</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">标准化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E4%BD%931commonmark"><span class="nav-number">1.2.</span> <span class="nav-text">变体1：CommonMark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E4%BD%932gfm"><span class="nav-number">1.3.</span> <span class="nav-text">变体2：GFM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E6%A0%87%E5%87%86%E8%A7%84%E8%8C%83"><span class="nav-number">1.4.</span> <span class="nav-text">Markdown 为何需要标准规范</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gfm-%E7%BA%A6%E5%AE%9A-gfm-preliminaries"><span class="nav-number">2.</span> <span class="nav-text">GFM 约定 | GFM Preliminaries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%92%8C%E8%A1%8C-characters-and-lines"><span class="nav-number">2.1.</span> <span class="nav-text">字符和行 | Characters and
+lines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E8%A1%A8%E7%AC%A6-tabs"><span class="nav-number">2.2.</span> <span class="nav-text">制表符 | Tabs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E5%AD%97%E7%AC%A6-insecure-characters"><span class="nav-number">2.3.</span> <span class="nav-text">不安全字符 | Insecure
+characters</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jun Jing"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Jun Jing</p>
+  <div class="site-description" itemprop="description">Learning, Thinking & Doing</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nyjingle" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nyjingle" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:nyjingle@gmail.com" title="E-Mail → mailto:nyjingle@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://freecomputerbooks.com/" title="https:&#x2F;&#x2F;freecomputerbooks.com&#x2F;" rel="noopener" target="_blank">FreeComputerBooks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Jun Jing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nothing but Blogging">
+      <meta itemprop="description" content="Learning, Thinking & Doing">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="MarkDown之二：标准化考虑 | Nothing but Blogging">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MarkDown之二：标准化考虑
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-06-24 16:44:45 / Modified: 17:24:24" itemprop="dateCreated datePublished" datetime="2022-06-24T16:44:45+08:00">2022-06-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/Skills/" itemprop="url" rel="index"><span itemprop="name">Skills</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>10k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>9 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Markdown 是否需要标准化？这是个颇具争议的问题。有人反对（如 Markdown
+发明人），有人致力于此（CommonMark）。事实是，目前 Markdown
+并未达成标准，不同组织的 Markdown 源文件在渲染为 HTML
+时存在各种各样的差异（风格）。</p>
+<p>但写作者适应某个渲染工具的成本并不高，很容易就可调整过来。</p>
+<span id="more"></span>
+<blockquote>
+
+</blockquote>
+<ol type="1">
+<li><a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/"
+title="MarkDown Author">JOHN GRUBER</a>：发明人的MarkDown官方站点</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Markdown"
+title="WikiPedia MarkDown">Markdown 维基</a>：维基百科（中文）</li>
+<li><a target="_blank" rel="noopener" href="https://www.markdownguide.org/"
+title="Markdown Guide">Markdown 指南</a>：关于MarkDown的一切</li>
+<li><a target="_blank" rel="noopener" href="https://markdown.github.io/"
+title="Markdown Community Page">Markdown
+Community</a>：GitHub上的MarkDown社区</li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/079b9e370acc">Markdown
+简介</a>：简书上一篇介绍，稍显啰嗦</li>
+<li><a
+target="_blank" rel="noopener" href="https://commonmark.org/">CommonMark</a>：MarkDown标准化规范</li>
+<li><a target="_blank" rel="noopener" href="https://github.github.com/gfm/">GFM</a>：GitHub Flavored
+Markdown Spec | Github风格Markdown规范</li>
+</ol>
+<h1 id="标准化">标准化</h1>
+<p>随着时间的推移，出现了许多Markdown实现。非正式规范中的一些含糊不清引起了人们的注意，促使Markdown解析器的一些开发人员努力实现标准化。</p>
+<p>从 2012 年开始， Markdown 的粉丝提出了一个标准的、明确的 Markdown
+语法规范，以及一套全面的测试，用来验证 Markdown 实现是否规范。但是由于
+<a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/"
+title="MarkDown Author">John Gruber</a> 极力反对标准化，所以不能使用
+Markdown 这个名字，改为了 CommonMark。</p>
+<blockquote>
+<p>格鲁伯：“不同的网站（和人们）有不同的需求。没有一种语法可以让所有人满意。”
+“ Because different sites (and people) have different needs. No one
+syntax would make all happy.”</p>
+</blockquote>
+<h2 id="概述">概述</h2>
+<p><strong><a target="_blank" rel="noopener" href="https://commonmark.org/">CommonMark</a></strong>
+奠定了 Markdown 标准化基础。</p>
+<p>2016 年 3 月，IETF
+<code>【Internet Engineering Task Force | 国际互联网工程任务组】</code>
+发布了 RFC 7763 和 RFC 7764。<code>【RFC，Request For Comments】</code>
+RFC 7763 从原始变体引入了 MIME
+<code>【Multipurpose Internet Mail Extensions | 多用途互联网邮件扩展】</code>
+类型 text/markdown。RFC 7764 讨论并注册了
+<em>MultiMarkdown</em>、<em>GitHub Flavored Markdown
+(GFM)</em>、<em>Pandoc</em>、<em>CommonMark</em> 及 <em>Markdown</em>
+等变体。能收录进 RFC，即正式承认了 Markdown 为互联网标准。</p>
+<p>2017 年，GitHub 发布了基于 CommonMark 的 <strong>GitHub Flavored
+Markdown（<a target="_blank" rel="noopener" href="https://github.github.com/gfm/">GFM</a>）</strong>
+的正式规范，并且使用 Markdown 作为默认的格式化写作语言。GFM
+除了表格、删除线、自动链接和任务列表被 GitHub
+规范作为扩展添加之外，它遵循 CommonMark 规范。这个规范更加肯定了
+Markdown 的作用，推动了 Markdown 的发展，是目前最流行的 Markdown
+标准。因为 Github 用户庞大，大多数平台和软件都向他看齐，纷纷使用
+GFM。</p>
+<blockquote>
+<p>Markdown 令人很困惑的一点是，实际上每个 Markdown
+应用都实现了有点差别的 Markdown 版本（因为 Markdown
+一直没有官方标准），这些不同的 Markdown 风格叫做
+<strong>Flavor</strong>。</p>
+</blockquote>
+<blockquote>
+<p>直到 CommanMark 和 GFM
+发布后，大部分应用都是以这两个规范为标准。所以学习前要弄清楚 Markdown
+应用所支持的
+Flavor，一般通过查看应用的帮助文档或者使用手册可以知道。比如通过 Typora
+的说明文档就知道它支持 GFM；有道云笔记的 Markdown 应该也是基于 GFM。</p>
+</blockquote>
+<blockquote>
+<p><a href="pandoc.org">Pandoc</a> 源于输出目标格式的多元化（非单一
+HTML），其 Markdown 并不是基于 CommonMark 或 GFM。</p>
+</blockquote>
+<h2 id="变体1commonmark">变体1：<a
+target="_blank" rel="noopener" href="https://commonmark.org/">CommonMark</a></h2>
+<p>We propose a standard, unambiguous syntax specification
+<code>【标准且无歧义的语法规范】</code> for Markdown, along with a suite
+of comprehensive tests to validate Markdown implementations against this
+specification. <code>【对 Markdown 规范性的测试】</code> We believe this
+is necessary, even essential, for the future of Markdown.</p>
+<p>The current version of the CommonMark spec
+(https://spec.commonmark.org/current) is quite robust after many years
+of public feedback.
+<code>【2020年4月，当前最新版本：0.30 @ 2021-6-19】</code></p>
+<p>The following sites and projects have adopted CommonMark:</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.discourse.org/">Discourse</a>: Discourse is
+the 100% open source discussion platform built for the next decade of
+the Internet. Use it as a mailing list, discussion forum, long-form chat
+room, and more!</p>
+<blockquote>
+<p>Discourse 是 Jeff Atwood
+推出的一个新的开源论坛项目，摒弃了传统论坛的话题讨论形式、拥有自学习系统、全Web应用同时适用于桌面和移动终端。基于
+Ruby on Rails 和 Ember.js 开发，数据库使用 PostgreSQL 和 Redis。
+Discourse is a from-scratch reboot, an attempt to reimagine what a
+modern Internet discussion forum should be today, in a world of
+ubiquitous smartphones, tablets, Facebook, and Twitter.</p>
+</blockquote></li>
+<li><p>GitHub：github.com</p></li>
+<li><p>GitLab | 极狐：gitlab.com | gitlab.cn</p>
+<blockquote>
+<p>GitLab 是一个使用 <em>MIT 许可证</em>
+的基于网络的Git仓库管理工具，且具有 wiki 和 issue
+跟踪功能，使用Git作为代码管理工具，并在此基础上搭建起来的web服务。
+2022年2月消息，极狐（GitLab）正式宣布推出极狐GitLab SaaS
+（JihuLab.com），为中国用户提供从源代码托管到开发运维的全栈式一体化DevOps
+SaaS平台与企业级专家咨询服务。</p>
+</blockquote></li>
+<li><p>Reddit: reddit.com</p>
+<blockquote>
+<p>Reddit is home to thousands of communities, endless conversation, and
+authentic human connection. Whether you're into breaking news, sports,
+TV fan theories, or a never-ending stream of the internet's cutest
+animals, there's a community on Reddit for you.</p>
+</blockquote></li>
+<li><p>Qt: qt.io
+是一个跨平台的C++应用程序开发框架。广泛用于开发GUI程序，也可用于控制台工具和服务器。Qt使用标准的C++和特殊的代码生成扩展（称为元对象编译器（Meta
+Object Compiler, moc））以及一些宏。</p>
+<blockquote>
+<strong>The Productivity Platform for the Future</strong>
+<ul>
+<li>Next generation user experience with limitless scalability.</li>
+<li>Qt is designed for producing cutting-edge software experiences in
+record-breaking times.</li>
+</ul>
+<strong>Design, Develop &amp; Deploy User Interfaces and
+Applications</strong>
+<ul>
+<li>Qt is the fastest and smartest way to produce industry-leading
+software that users love.</li>
+<li>Target embedded, desktop, and mobile platforms with the same code
+base for all.</li>
+</ul>
+</blockquote></li>
+<li><p>Stack Overflow / Stack Exchange: stackoverflow.com</p>
+<blockquote>
+<p>Stack Overflow 一个程序设计领域的问答网站。 Stack Exchange
+是一系列问答网站，每一个网站包含不同领域的问题。这些网站参考Stack
+Overflow，一个关于程序设计的问答网站，也是Stack
+Exchange的第一个成员。</p>
+</blockquote></li>
+<li><p>Swift: swift.org
+编程语言，支持多编程范式和编译式，用来撰写基于macOS/OS
+X、iOS、iPadOS、watchOS和tvOS的软件。苹果公司于2014年发布了Swift，让Swift与Objective-C共存在苹果公司的操作系统上。</p>
+<blockquote>
+<p>苹果宣称Swift的特点是：快速、现代、安全、互动，而且明显优于Objective-C语言。</p>
+<p>Swift取消了Objective-C的指针和其他不安全访问的使用，舍弃了Objective
+C早期套用Smalltalk风格的语法，全面改为句点表示法（dot-notation）。Swift具备类型推导（type
+inference）。同时，它提供了类似C++、C#中的名字空间（namespace）、泛型（generic）、运算符重载（operator
+overloading）。Swift被简单的形容为 “没有C的Objective-C”（Objective-C
+without the C）</p>
+<p>Swift is a general-purpose programming language built using a modern
+approach to safety, performance, and software design patterns. Swift is
+intended as a replacement for C-based languages (C, C++, and
+Objective-C).</p>
+</blockquote></li>
+</ul>
+<h2 id="变体2gfm">变体2：<a
+target="_blank" rel="noopener" href="https://github.github.com/gfm/">GFM</a></h2>
+<p>GitHub Flavored Markdown, often shortened as GFM, is the
+<em>dialect</em> <code>【方言】</code> of Markdown that is currently
+supported for user content on GitHub.com and GitHub Enterprise.</p>
+<p>This formal specification, based on the <a
+target="_blank" rel="noopener" href="https://commonmark.org/">CommonMark</a> Spec, defines the syntax
+and <em>semantics</em> <code>【语义】</code> of this dialect.</p>
+<p>GFM is a strict superset of CommonMark. All the features which are
+supported in GitHub user content and that are not specified on the
+original CommonMark Spec are hence known as <strong>extensions</strong>,
+and highlighted as such.
+<code>【GFM是CommonMark的超集，包含若干扩展（extensions）。】</code></p>
+<h2 id="markdown-为何需要标准规范">Markdown 为何需要标准规范</h2>
+<blockquote>
+<p>参考 GFM 文档</p>
+</blockquote>
+<p>John Gruber’s canonical description <code>【规范描述】</code> of
+Markdown’s syntax does not specify the syntax unambiguously. Here are
+some examples of questions it does not answer:</p>
+<ol type="1">
+<li><p><code>【子列表需要多少缩进量】</code>How much indentation is
+needed for a sublist? The spec says that continuation paragraphs need to
+be indented four spaces, but is not fully explicit about sublists. It is
+natural to think that they, too, must be indented four spaces, but
+<code>Markdown.pl</code> does not require that. This is hardly a “corner
+case”<code>【极端情况】</code>, and divergences between implementations
+on this issue often lead to surprises for users in real
+documents.</p></li>
+<li><p><code>【块引用或标题前是否需要空行】</code>Is a blank line needed
+before a block quote or heading? Most implementations do not require the
+blank line. However, this can lead to unexpected results in hard-wrapped
+text <code>【硬换行文本】</code>, and also to ambiguities in parsing
+(note that some implementations put the heading inside the blockquote,
+while others do not).</p></li>
+<li><p><code>【缩进码块前是否需要空行】</code> Is a blank line needed
+before an indented code block? (Markdown.pl requires it, but this is not
+mentioned in the documentation, and some implementations do not require
+it.)</p></li>
+<li><p><code>【列表项目被包含仅&lt;p&gt;标签的确切规则】</code> What is
+the exact rule for determining when list items get wrapped in &lt;p&gt;
+tags? Can a list be partially “loose” and partially “tight”? What should
+we do with a list like this?</p>
+<blockquote>
+<pre><code>1. one
+
+2. two
+3. three</code></pre>
+<p>Or this?</p>
+<pre><code>1.  one
+    - a
+
+    - b
+2.  two</code></pre>
+</blockquote></li>
+<li><p><code>【列表符号是否可以缩进？有序列表符号可右对齐？】</code> Can
+list markers be indented? Can ordered list markers be right-aligned?</p>
+<blockquote>
+<pre><code> 8. item 1
+ 9. item 2
+10. item 2a</code></pre>
+</blockquote></li>
+<li><p><code>【主题中断的逻辑模糊】</code> Is this one list with a
+thematic break <code>【主题中断】</code> in its second item, or two
+lists separated by a thematic break?</p>
+<blockquote>
+<pre><code>* a
+* * * * *
+* b</code></pre>
+</blockquote></li>
+<li><p><code>【列表符号由有序改为无序引起的模糊】</code> When list
+markers change from numbers to bullets, do we have two lists or one?
+(The Markdown syntax description suggests two, but the perl scripts and
+many other implementations produce one.)</p>
+<blockquote>
+<pre><code>1. fee
+2. fie
+-  foe
+-  fum</code></pre>
+</blockquote></li>
+<li><p><code>【内联结构标记的优先规则是什么】</code> What are the
+precedence rules for the markers of inline structure? For example, is
+the following a valid link, or does the code span take precedence ?</p>
+<blockquote>
+<pre><code>[a backtick (`)](/url) and [another backtick (`)](/url).</code></pre>
+</blockquote></li>
+<li><p><code>【强调标记的优先规则是什么】</code> What are the precedence
+rules for markers of emphasis and strong emphasis? For example, how
+should the following be parsed?</p>
+<blockquote>
+<pre><code>*foo *bar* baz*</code></pre>
+</blockquote></li>
+<li><p><code>【块级和内敛结构优先规则是什么】</code> What are the
+precedence rules between block-level and inline-level structure? For
+example, how should the following be parsed?</p>
+<blockquote>
+<pre><code>- `a long code span can contain a hyphen like this
+  - and it can screw things up`</code></pre>
+</blockquote></li>
+<li><p><code>【列表项是否可包含章节标题】</code> Can list items include
+section headings? (<code>Markdown.pl</code> does not allow this, but
+does allow blockquotes to include headings.)</p>
+<blockquote>
+<pre><code>- # Heading</code></pre>
+</blockquote></li>
+<li><p><code>【列表项可否为空】</code> Can list items be empty?</p>
+<blockquote>
+<pre><code>* a 
+* 
+* b </code></pre>
+</blockquote></li>
+<li><p><code>【引用块或列表项中是否可以定义链接引用】</code> Can link
+references be defined inside block quotes or list items?</p>
+<blockquote>
+<pre><code>&gt; Blockquote [foo].
+&gt;
+&gt; [foo]: /url</code></pre>
+</blockquote></li>
+<li><p><code>【同一参考有多个定义，优先级规则是什么】</code> If there
+are multiple definitions for the same reference, which takes
+precedence?</p>
+<blockquote>
+<pre><code>[foo]: /url1
+[foo]: /url2
+
+[foo][]</code></pre>
+</blockquote></li>
+</ol>
+<p>Because there is no unambiguous spec, implementations have diverged
+considerably.</p>
+<p>As a result, users are often surprised to find that a document that
+renders one way on one system (say, a GitHub wiki) renders differently
+on another (say, converting to docbook using pandoc).</p>
+<h1 id="gfm-约定-gfm-preliminaries">GFM 约定 | GFM Preliminaries</h1>
+<h2 id="字符和行-characters-and-lines">字符和行 | Characters and
+lines</h2>
+<p>Any sequence of characters is a valid CommonMark document. A
+<strong>character</strong> is a ==Unicode== code point.
+<code>【character（字符）的定义】</code></p>
+<p>This spec does not specify an encoding; it <strong>thinks of lines as
+composed of characters rather than bytes</strong>. A conforming parser
+may be limited to a certain encoding.</p>
+<p>A <strong>line</strong> is a sequence of zero or more characters
+other than newline (<code>U+000A换行符</code>) or carriage return
+(<code>U+000D回车符</code>), followed by a line ending or by the end of
+file. <code>【line（行）的定义】</code></p>
+<p>A <strong>line ending</strong> is a newline (U+000A), a carriage
+return (U+000D) not followed by a newline, or a carriage return and a
+following newline. <code>【line ending（行结尾）的定义】</code></p>
+<p>A line containing no characters, or a line containing only spaces
+(U+0020) or tabs (U+0009), is called a <strong>blank line</strong>.
+<code>【blank line（空行）的定义】</code></p>
+<p>A <strong>whitespace character</strong> is a space (U+0020), tab
+(U+0009), newline (U+000A), line tabulation (U+000B), form feed
+(U+000C), or carriage return (U+000D).
+<code>【whitespace character（空白字符）的定义：空格、制表符、换行符、行制表符、换页符、回车符】</code>
+&gt; tab (U+0009)又称common tab, horizontal tabulation (HT) or character
+tabulation; line tabulation (U+000B) 又称 vertical tabulation (VT)</p>
+<p><strong>Whitespace</strong> is a sequence of one or more whitespace
+characters.<code>【whitespace（空白）的定义】</code></p>
+<p>A <strong>Unicode whitespace character</strong> is any code point in
+the Unicode Zs <code>【Separator, Space】</code> general category, or a
+tab (U+0009), carriage return (U+000D), newline (U+000A), or form feed
+(U+000C).</p>
+<p><strong>Unicode whitespace</strong> is a sequence of one or more
+Unicode whitespace characters.</p>
+<p>A <strong>space</strong> is U+0020.</p>
+<p>A <strong>non-whitespace character</strong> is any character that is
+not a whitespace character.</p>
+<p>An <strong>ASCII punctuation character</strong>
+<code>【标点字符】</code> is
+<code>!, ", #, $, %, &amp;, ', (, ), *, +, ,, -, ., / (U+0021–2F), :, ;, &lt;, =, &gt;, ?, @ (U+003A–0040), [, \, ], ^, _, ``  (U+005B–0060), &#123;, |, &#125;, or ~ (U+007B–007E)</code>.</p>
+<p>A <strong>punctuation character</strong> is an ASCII punctuation
+character or anything in the general Unicode categories
+Pc<code>【Punctuation, Connector】</code>, Pd
+<code>【Punctuation, Dash】</code>, Pe
+<code>【Punctuation, Close】</code>, Pf
+<code>【Punctuation, Final quote】</code>, Pi
+<code>【Punctuation, Initial quote】</code>, Po
+<code>【Punctuation, Other】</code>, or Ps
+<code>【Punctuation, Open】</code>.</p>
+<h2 id="制表符-tabs">制表符 | Tabs</h2>
+<p>Tabs in lines are not expanded to spaces. However, in contexts where
+whitespace helps to define block structure, tabs behave as if they were
+replaced by spaces with a tab stop of 4 characters.</p>
+<p>Thus, for example, a tab can be used instead of four spaces in an
+indented code block. (Note, however, that internal tabs are passed
+through as literal tabs, not expanded to spaces.)
+<code>【缩进时，tab相当于4个spaces；行内，tab为其字面量】</code></p>
+<p>Normally the <code>&gt;</code> that begins a block quote may be
+followed optionally by a space, which is not considered part of the
+content. In the following case <code>&gt;</code> is followed by a tab,
+which is treated as if it were expanded into three spaces. Since one of
+these spaces is considered part of the delimiter, foo is considered to
+be indented six spaces inside the block quote context, so we get an
+indented code block starting with two spaces.
+<code>【2个tab跟在&gt;后面，相当于7个spaces，第1个看作是界定符&gt;的一部分，第2~5个共4个spaces开启一个码块，最终码块内容前含2个spaces】</code></p>
+<blockquote>
+<pre><code>  foo</code></pre>
+</blockquote>
+<h2 id="不安全字符-insecure-characters">不安全字符 | Insecure
+characters</h2>
+<p>For security reasons, the Unicode character U+0000 must be replaced
+with the REPLACEMENT CHARACTER (U+FFFD).</p>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Jun Jing
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://nyjingle.github.io/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/" title="MarkDown之二：标准化考虑">https://nyjingle.github.io/2022/06/24/MarkDown之二：标准化考虑/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"><i class="fa fa-tag"></i> markdown</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/23/CCSDS%E6%A0%87%E5%87%86%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%92%8C%E6%BC%94%E5%8F%98/" rel="prev" title="CCSDS标准的建立和演变">
+                  <i class="fa fa-chevron-left"></i> CCSDS标准的建立和演变
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jun Jing</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>Symbols count total: </span>
+    <span title="Symbols count total">184k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>Reading time total &asymp;</span>
+    <span title="Reading time total">2:47</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.js","integrity":"sha256-hlC2uSQYTmPsrzGZTEQEg9PZ1a/+SV6VBCTclohf2og="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
