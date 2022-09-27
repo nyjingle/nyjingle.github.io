@@ -21,33 +21,37 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nyjingle.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":false,"nav":{"changyan":{"order":-2},"gitalk":{"order":-1}},"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="今天（2022-6-16）在Win10系统新装最新版 Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。  安装完毕后提示：您的安装可能需要额外的配置步骤。">
+    <meta name="description" content="theme-next主题支持多个留言系统，尝试后发现[changyang]（畅言）系统比较好用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matlab安装后需要支持的编译器">
-<meta property="og:url" content="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/index.html">
+<meta property="og:title" content="个人博客搭建之八：留言系统">
+<meta property="og:url" content="https://nyjingle.github.io/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Nothing but Blogging">
-<meta property="og:description" content="今天（2022-6-16）在Win10系统新装最新版 Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。  安装完毕后提示：您的安装可能需要额外的配置步骤。">
+<meta property="og:description" content="theme-next主题支持多个留言系统，尝试后发现[changyang]（畅言）系统比较好用。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdnimg.mr-wu.cn/wp-content/uploads/2022/03/matlab-2022a.jpg">
-<meta property="og:image" content="https://nyjingle.github.io/images/matlab_compiler_win.png">
-<meta property="article:published_time" content="2022-06-16T10:07:42.000Z">
-<meta property="article:modified_time" content="2022-06-17T14:45:32.535Z">
+<meta property="og:image" content="https://nyjingle.github.io/images/changyan_reg.png">
+<meta property="og:image" content="https://nyjingle.github.io/images/changyan_id.png">
+<meta property="og:image" content="https://nyjingle.github.io/images/changyan_comment_type.png">
+<meta property="article:published_time" content="2022-09-26T08:56:23.000Z">
+<meta property="article:modified_time" content="2022-09-27T09:50:55.860Z">
 <meta property="article:author" content="Jun Jing">
-<meta property="article:tag" content="Matlab">
-<meta property="article:tag" content="编译器">
-<meta property="article:tag" content="MinGW">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="next">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="theme">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdnimg.mr-wu.cn/wp-content/uploads/2022/03/matlab-2022a.jpg">
+<meta name="twitter:image" content="https://nyjingle.github.io/images/changyan_reg.png">
 
 
-<link rel="canonical" href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/">
+<link rel="canonical" href="https://nyjingle.github.io/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/","path":"2022/06/16/Matlab安装后需要支持的编译器/","title":"Matlab安装后需要支持的编译器"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nyjingle.github.io/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/","path":"2022/09/26/个人博客搭建之八：留言系统/","title":"个人博客搭建之八：留言系统"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Matlab安装后需要支持的编译器 | Nothing but Blogging</title>
+<title>个人博客搭建之八：留言系统 | Nothing but Blogging</title>
   
 
 
@@ -151,8 +155,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.</span> <span class="nav-text">需求确认</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E5%99%A8-mingw"><span class="nav-number">2.</span> <span class="nav-text">第三方编译器 MinGW</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#interfaces-to-other-languages"><span class="nav-number">3.</span> <span class="nav-text">Interfaces to Other
-Languages</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-%E5%AE%98%E7%BD%91%E6%8F%92%E4%BB%B6%E6%89%AB%E6%8F%8F"><span class="nav-number">1.</span> <span class="nav-text">hexo
+官网插件扫描</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#theme-next-%E4%B8%BB%E9%A2%98%E7%9A%84%E5%A4%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81"><span class="nav-number">2.</span> <span class="nav-text">theme-next
+主题的多留言系统支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%95%85%E8%A8%80%E4%BA%91%E8%AF%84-changyan-china"><span class="nav-number">3.</span> <span class="nav-text">畅言（云评） | Changyan (China)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">4.</span> <span class="nav-text">效果</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -235,7 +240,7 @@ Languages</span></a></li></ol></div>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/">
+    <link itemprop="mainEntityOfPage" href="https://nyjingle.github.io/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -248,12 +253,12 @@ Languages</span></a></li></ol></div>
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Matlab安装后需要支持的编译器 | Nothing but Blogging">
+      <meta itemprop="name" content="个人博客搭建之八：留言系统 | Nothing but Blogging">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Matlab安装后需要支持的编译器
+          个人博客搭建之八：留言系统
         </h1>
 
         <div class="post-meta-container">
@@ -264,14 +269,14 @@ Languages</span></a></li></ol></div>
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-06-16 18:07:42" itemprop="dateCreated datePublished" datetime="2022-06-16T18:07:42+08:00">2022-06-16</time>
+      <time title="Created: 2022-09-26 16:56:23" itemprop="dateCreated datePublished" datetime="2022-09-26T16:56:23+08:00">2022-09-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-06-17 22:45:32" itemprop="dateModified" datetime="2022-06-17T22:45:32+08:00">2022-06-17</time>
+      <time title="Modified: 2022-09-27 17:50:55" itemprop="dateModified" datetime="2022-09-27T17:50:55+08:00">2022-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -279,11 +284,11 @@ Languages</span></a></li></ol></div>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Communications/" itemprop="url" rel="index"><span itemprop="name">Communications</span></a>
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Communications/Skills/" itemprop="url" rel="index"><span itemprop="name">Skills</span></a>
+          <a href="/categories/Software/WEB/" itemprop="url" rel="index"><span itemprop="name">WEB</span></a>
         </span>
     </span>
 
@@ -296,8 +301,8 @@ Languages</span></a></li></ol></div>
       </span>
       <span class="post-meta-item-text">Changyan: </span>
     
-    <a title="Matlab安装后需要支持的编译器" href="/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::019d58b799bc188666925f23458b60c6" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="个人博客搭建之八：留言系统" href="/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::1463c8aec08f8407e3ce4f706539f2bf" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -308,14 +313,14 @@ Languages</span></a></li></ol></div>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>3.2k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>3 mins.</span>
+      <span>1 mins.</span>
     </span>
 </div>
 
@@ -326,154 +331,83 @@ Languages</span></a></li></ol></div>
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天（2022-6-16）在Win10系统新装最新版
-Matlab（R2022a），完全安装模式，占用空间大小31.2G，下载安装共耗时约2h。</p>
-<p><img src="https://cdnimg.mr-wu.cn/wp-content/uploads/2022/03/matlab-2022a.jpg" width = "300"  div align=center /></p>
-<p>安装完毕后提示：您的安装可能需要额外的配置步骤。 <span id="more"></span></p>
+        <p><a
+target="_blank" rel="noopener" href="https://theme-next.js.org/">theme-next</a>主题支持多个留言系统，尝试后发现[changyang]（畅言）系统比较好用。</p>
+<span id="more"></span>
+<h1 id="hexo-官网插件扫描"><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>
+官网插件扫描</h1>
 <blockquote>
-<p>要加快以下产品的计算速度，需要<a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>：</p>
-<ul>
-<li>Fixed-Point Designer</li>
-<li>SimBiology</li>
-</ul>
-<p>以下产品需要<a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>:</p>
-<ul>
-<li>Embedded Coder</li>
-<li>MATLAB Coder</li>
-<li>Simulink Coder</li>
-</ul>
-<p>MATLAB Compiler 需要<a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>来创建
-Excel 加载项。</p>
-<p>MATLAB Compiler SDK 要求安装以下程序:</p>
-<ul>
-<li><a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">.NET
-framework</a>，用于创建与 Excel 集成的 .NET 程序集和可部署的存档</li>
-<li><a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">支持的编译器</a>，用于创建
-COM 组件、C 和 C++ 共享库</li>
-<li><a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/language-interfaces.html">Java
-JDK</a>，用于创建 Java 包</li>
-</ul>
+<p>https://hexo.io/plugins/</p>
 </blockquote>
-<h1 id="需求确认">需求确认</h1>
-<p>分析一下，目前、或将来可能会需要：</p>
-<ul>
-<li>加快计算速度（Fixed-Point Designer）</li>
-<li>Embedded Coder、MATLAB Coder、Simulink Coder</li>
-<li>创建 COM 组件、C 和 C++ 共享库</li>
-</ul>
-<p>上述提示中的链接最终指向两个目标：</p>
 <ol type="1">
-<li><a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/supported-compilers.html">Supported
-and Compatible Compilers</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/support/requirements/language-interfaces.html">Interfaces
-to Other Languages</a></li>
-</ol>
-<p>从中寻找需要的编译器和辅助程序。</p>
-<h1 id="第三方编译器-mingw">第三方编译器 MinGW</h1>
-<p>A number of MathWorks products or product features require that you
-have a third-party compiler installed on your system. The tables below
-outline the compilers that are supported by various MathWorks products.
-These compilers are provided by a number of vendors and are available
-under a variety of commercial, academic, or open source terms; visit the
-providers' websites for further information.</p>
-<figure>
-<img src="/images/matlab_compiler_win.png" alt="Matlab Compiler" />
-<figcaption aria-hidden="true">Matlab Compiler</figcaption>
-</figure>
-<p>显然，MATLAB Product Family 是推荐选用 <code>MinGW 6.3 C/C++</code>
-的；</p>
-<p>另 <code>MinGW 6.3 C/C++</code> 对 Simulink Product Family
-的支持极其全面： - Simulink: For S-Function compilation - Simulink: For
-Model Referencing, Accelerator mode, Rapid Accelerator mode, and MATLAB
-Function blocks - <strong>Stateflow</strong>: For all features -
-<strong>Simulink Coder</strong>: For all features - Embedded Coder: When
-targeting the host OS - SerDes Toolbox: For IBIS-AMI model
-generation</p>
-<p><code>MinGW 6.3 C/C++</code> 对 MATLAB Compiler 的支持： - MATLAB
-Compiler: Excel add-in for desktop - MATLAB Compiler SDK: C/C++ - MATLAB
-Compiler SDK: COM &gt; 不支持MATLAB Compiler SDK: .NET（需要 Microsoft
-Visual C++）</p>
-<p><code>MinGW 6.3 C/C++</code> 的下载链接引导到：<a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-compiler">MATLAB
-Support for MinGW-w64 C/C++ Compiler</a></p>
-<p>MinGW-w64 is a compiler suite for Windows based on the GNU tool
-chain. It includes a GCC compiler and related tools for compiling C and
-C++ applications for Windows. C and C++ applications compiled with
-MinGW-w64 GCC can be called from MATLAB using MEX. This GCC compiler can
-also be helpful for other MathWorks products that require a C or C++
-compiler.</p>
-<p>真正下载链接：<a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/mlc-downloads/downloads/submissions/52848/versions/22/download/mlpkginstall">download</a>
-Select the download button, above, then double click on the file or drag
-it into the MATLAB Command Window to install.</p>
-<p>一个16KB的文件<code>mingw.mlpkginstall</code>，双击（Win10系统已经注册过该类文件为<code>MATLAB Support Package Installer</code>），打开Matlab的<code>附加功能管理器</code>，安装。</p>
+<li><p><a
+target="_blank" rel="noopener" href="https://github.com/snowdreams1006/hexo-plugin-gitalk">hexo-plugin-gitalk</a></p>
 <blockquote>
-<p>需登录Matlab账号验证，以在线下载所需资源。</p>
+<p>Hexo 整合 gitalk 组件实现博客评论功能。久未更新（3年）</p>
+</blockquote></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://github.com/bedwardly-down/hexo-plugin-schnack">hexo-plugin-schnack</a></p>
+<blockquote>
+<p>Plugin for adding the Schnack comment system to your Hexo Blog.
+github或Twitter账号登录后可评论</p>
+</blockquote></li>
+</ol>
+<h1 id="theme-next-主题的多留言系统支持"><a
+target="_blank" rel="noopener" href="https://theme-next.js.org/">theme-next</a>
+主题的多留言系统支持</h1>
+<blockquote>
+<p>https://theme-next.js.org/muse/docs/third-party-services/comments.html</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MATLAB Support for MinGW-w64 C/C++ Compiler 版本  22.1.0</span><br><span class="line">第三方软件:</span><br><span class="line">MinGW 6.3.0 from MinGW-w64.org</span><br></pre></td></tr></table></figure>
-<p>This Add-On installs one of the following versions of MinGW GCC based
-on your version of MATLAB:</p>
-<table>
-<thead>
-<tr class="header">
-<th>MATLAB version</th>
-<th>MinGW version</th>
-<th>For more information</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>R2018b and later</td>
-<td>GCC 6.3</td>
-<td>http://mingw-w64.org</td>
-</tr>
-</tbody>
-</table>
-<p>完毕，命令行验证 OK。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; mex -setup</span><br><span class="line">MEX 配置为使用 <span class="string">&#x27;MinGW64 Compiler (C)&#x27;</span> 以进行 C 语言编译。</span><br><span class="line"></span><br><span class="line">要选择不同的语言，请从以下选项中选择一种命令:</span><br><span class="line"> mex -setup C++ </span><br><span class="line"> mex -setup FORTRAN</span><br></pre></td></tr></table></figure></p>
-<h1 id="interfaces-to-other-languages">Interfaces to Other
-Languages</h1>
-<p>其他语言接口。</p>
-<p>MATLAB®, MATLAB Production Server, and its add-on products are
-compatible with the following versions of other programming languages.
-For information about which versions of Python are compatible with
-previous releases of MATLAB, see Versions of Python Compatible With
-MATLAB Products by Release. For more information, see <a
-target="_blank" rel="noopener" href="https://ww2.mathworks.cn/products/matlab/matlab-and-other-programming-languages.html">Using
-MATLAB with Other Languages</a>.</p>
-<p>与其他编程语言结合，包含三种途径：一是从其他语言调用 Matlab （Engine
-API）；二是从 Matlab
-调用其他语言（编写的库）或<code>system components</code>；三是通过
-MATLAB Compiler and MATLAB Compiler SDK 打包成其他语言的组件。</p>
-<p>支持语言包括：</p>
+<p><strong>Multiple Comment System Support</strong></p>
+<p>NexT allows you to enable multiple commenting systems at the same
+time.</p>
+<p>通过主题yml文件可配置使用哪些留言系统。支持的留言系统包括：</p>
 <ul>
-<li>C - All versions prior to 11</li>
-<li>C - Version 11 （不支持从Matlab调用）<br />
-</li>
-<li>C++ - All versions prior to 11</li>
-<li>C++ - Version 11</li>
-<li>C++ - Version 14</li>
-<li>Fortran - All versions<br />
-</li>
-<li>Python 2.7 | 3.7 | 3.8 | 3.9</li>
-<li>.COM components and apps - all versions<br />
-</li>
-<li>Java 8 (Oracle Java)</li>
-<li>Java 8 (OpenJDK) （不支持从Matlab调用）</li>
-<li>.NET Framework CLR version 2.0 | 4.0 （不支持调用Matlab）</li>
-<li>HTTP 1.1 （不支持调用Matlab）<br />
-</li>
-<li>Perl 5.32.1（不支持调用Matlab）</li>
+<li>disqus</li>
+<li>disqusjs</li>
+<li>changyan</li>
+<li>livere</li>
+<li>gitalk</li>
+<li>utterances</li>
+<li>isso</li>
 </ul>
-<p>此外，Matlab Coder | Embedded Coder | Simulink Coder 支持将 Matlab |
-Simulink 转换为其他语言代码。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Multiple Comment System Support</span></span><br><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="comment"># Available values: tabs | buttons</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">tabs</span></span><br><span class="line">  <span class="comment"># Choose a comment system to be displayed by default</span></span><br><span class="line">  <span class="attr">active:</span> <span class="string">changyan</span></span><br><span class="line">  <span class="comment"># Setting `true` means remembering the comment system selected by the visitor</span></span><br><span class="line">  <span class="attr">storage:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Lazyload all comment systems.</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Modify icons and texts for any style, here are some examples</span></span><br><span class="line">  <span class="attr">nav:</span></span><br><span class="line">    <span class="comment">#disqus:</span></span><br><span class="line">    <span class="comment">#  text: Load Disqus</span></span><br><span class="line">    <span class="comment">#  order: -1</span></span><br><span class="line">    <span class="attr">changyan:</span></span><br><span class="line">      <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>在某些页面关闭评论</strong></p>
+<p>If you want to disable it in one page, just add comments key to
+front-matter and set its value to false. Like following:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">All</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<h1 id="畅言云评-changyan-china">畅言（云评） | Changyan (China)</h1>
+<p><a
+target="_blank" rel="noopener" href="https://changyan.kuaizhan.com/">畅言云评论</a>是业内领先的社会化评论系统，支持PC和移动端两种接入方式，为网站提供了一种全新的评论方式。云评论拥有多种常用账号登录、三重过滤机制、实时的数据统计、快捷数据导出、全面支持移动端等领先功能。充分满足了当前各大网站对于用户登录、评论、分享
+、审核等方面的需求。</p>
+<ol type="1">
+<li>Create an account or log into <a
+target="_blank" rel="noopener" href="https://changyan.kuaizhan.com/">Changyan</a>, then add your site
+to get APP ID and APP KEY.</li>
+</ol>
+<p>注册过程很常规，要填写必要的站点名称和地址，而后会得到ID和密钥。</p>
+<figure>
+<img src="/images/changyan_reg.png" alt="畅言注册网站" />
+<figcaption aria-hidden="true">畅言注册网站</figcaption>
+</figure>
+<figure>
+<img src="/images/changyan_id.png" alt="畅言ID+密钥" />
+<figcaption aria-hidden="true">畅言ID+密钥</figcaption>
+</figure>
+<ol start="2" type="1">
+<li>Set the value enable to true, and add the obtained APP ID (appid)
+and APP KEY (appkey) to the changyan section in the NexT config file as
+following: (<code>_config.next.yml</code>)</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># changyan</span></span><br><span class="line"><span class="attr">changyan:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appid:</span> <span class="string">your_id</span></span><br><span class="line">  <span class="attr">appkey:</span> <span class="string">your_key</span></span><br></pre></td></tr></table></figure>
+<h1 id="效果">效果</h1>
+<p>更新发布博客系统：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="/images/changyan_comment_type.png" alt="畅言留言框" />
+<figcaption aria-hidden="true">畅言留言框</figcaption>
+</figure>
+<p>支持微信、微博、QQ和手机号登录畅言系统进行留言。</p>
 
     </div>
 
@@ -493,7 +427,7 @@ Simulink 转换为其他语言代码。</p>
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://nyjingle.github.io/2022/06/16/Matlab%E5%AE%89%E8%A3%85%E5%90%8E%E9%9C%80%E8%A6%81%E6%94%AF%E6%8C%81%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8/" title="Matlab安装后需要支持的编译器">https://nyjingle.github.io/2022/06/16/Matlab安装后需要支持的编译器/</a>
+      <a href="https://nyjingle.github.io/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%85%AB%EF%BC%9A%E7%95%99%E8%A8%80%E7%B3%BB%E7%BB%9F/" title="个人博客搭建之八：留言系统">https://nyjingle.github.io/2022/09/26/个人博客搭建之八：留言系统/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -502,22 +436,25 @@ Simulink 转换为其他语言代码。</p>
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Matlab/" rel="tag"><i class="fa fa-tag"></i> Matlab</a>
-              <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 编译器</a>
-              <a href="/tags/MinGW/" rel="tag"><i class="fa fa-tag"></i> MinGW</a>
+              <a href="/tags/node-js/" rel="tag"><i class="fa fa-tag"></i> node.js</a>
+              <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+              <a href="/tags/github/" rel="tag"><i class="fa fa-tag"></i> github</a>
+              <a href="/tags/theme/" rel="tag"><i class="fa fa-tag"></i> theme</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/06/14/A-%E7%B1%BB%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%EF%BC%88%E4%BC%9A%E8%AE%AE%EF%BC%89%E7%9B%AE%E5%BD%95/" rel="prev" title="A 类学术期刊（会议）目录">
-                  <i class="fa fa-chevron-left"></i> A 类学术期刊（会议）目录
+                <a href="/2022/06/24/MarkDown%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E8%80%83%E8%99%91/" rel="prev" title="MarkDown之二：标准化考虑">
+                  <i class="fa fa-chevron-left"></i> MarkDown之二：标准化考虑
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/06/17/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E4%B8%83%EF%BC%9AMathJax%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/" rel="next" title="个人博客搭建之七：MathJax数学公式渲染">
-                  个人博客搭建之七：MathJax数学公式渲染 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/09/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E4%B9%9D%EF%BC%9Ahexo-6-3%E5%8F%8Anext-8-13-0%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0/" rel="next" title="个人博客搭建之九：hexo_6.3及next_8.13.0版本更新">
+                  个人博客搭建之九：hexo_6.3及next_8.13.0版本更新 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -530,7 +467,7 @@ Simulink 转换为其他语言代码。</p>
 
 
 
-    <div class="comments" id="SOHUCS" sid="019d58b799bc188666925f23458b60c6"></div>
+    <div class="comments" id="SOHUCS" sid="1463c8aec08f8407e3ce4f706539f2bf"></div>
 </div>
   </main>
 
