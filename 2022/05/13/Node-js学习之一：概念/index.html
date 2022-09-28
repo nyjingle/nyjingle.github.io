@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nyjingle.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":false,"nav":{"changyan":{"order":-2},"gitalk":{"order":-1}},"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基本概念 node.js百度百科的解释 第一段如下： &gt; Node.js发布于2009年5月，由Ryan Dahl开发，是一个基于Chrome V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I&#x2F;O模型，让JavaScript 运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。 可以看">
+    <meta name="description" content="基本概念 node.js百度百科的解释 第一段如下：  Node.js发布于2009年5月，由Ryan Dahl开发，是一个基于Chrome V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I&#x2F;O模型，让JavaScript 运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。  可以看出">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js学习之一：概念">
 <meta property="og:url" content="https://nyjingle.github.io/2022/05/13/Node-js%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%B8%80%EF%BC%9A%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Nothing but Blogging">
-<meta property="og:description" content="基本概念 node.js百度百科的解释 第一段如下： &gt; Node.js发布于2009年5月，由Ryan Dahl开发，是一个基于Chrome V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I&#x2F;O模型，让JavaScript 运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。 可以看">
+<meta property="og:description" content="基本概念 node.js百度百科的解释 第一段如下：  Node.js发布于2009年5月，由Ryan Dahl开发，是一个基于Chrome V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I&#x2F;O模型，让JavaScript 运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。  可以看出">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-13T13:14:21.000Z">
-<meta property="article:modified_time" content="2022-06-16T11:05:08.271Z">
+<meta property="article:modified_time" content="2022-09-28T05:47:00.396Z">
 <meta property="article:author" content="Jun Jing">
 <meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
@@ -146,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node.js%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.</span> <span class="nav-text">node.js百度百科的解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node.js%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">node.js维基百科的解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.</span> <span class="nav-text">扩展概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E4%B8%8E%E5%B0%9D%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">了解与尝试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">2.1.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package.json"><span class="nav-number">2.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A6%82%E5%BF%B5-1"><span class="nav-number">2.3.</span> <span class="nav-text">扩展概念</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node.js%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.</span> <span class="nav-text">node.js百度百科的解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node.js%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">node.js维基百科的解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.</span> <span class="nav-text">扩展概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E4%B8%8E%E5%B0%9D%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">了解与尝试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">2.1.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package.json"><span class="nav-number">2.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%89%A9%E5%B1%95"><span class="nav-number">2.3.</span> <span class="nav-text">概念扩展</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -265,7 +265,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-06-16 19:05:08" itemprop="dateModified" datetime="2022-06-16T19:05:08+08:00">2022-06-16</time>
+      <time title="Modified: 2022-09-28 13:47:00" itemprop="dateModified" datetime="2022-09-28T13:47:00+08:00">2022-09-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,7 +302,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>6.3k</span>
+      <span>6.2k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -323,10 +323,12 @@
         <h1 id="基本概念">基本概念</h1>
 <h2 id="node.js百度百科的解释"><a
 target="_blank" rel="noopener" href="https://baike.baidu.com/item/node.js">node.js百度百科</a>的解释</h2>
-<p>第一段如下： &gt; Node.js发布于2009年5月，由Ryan
-Dahl开发，是一个基于Chrome
+<p>第一段如下：</p>
+<blockquote>
+<p>Node.js发布于2009年5月，由Ryan Dahl开发，是一个基于Chrome
 V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I/O模型，让JavaScript
 运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。</p>
+</blockquote>
 <p>可以看出，node.js对JavaScript意义重大，极大提升了其江湖地位。
 但这一个解释又引出了我如下问题：</p>
 <ol type="1">
@@ -337,17 +339,21 @@ V8引擎的JavaScript运行环境，使用了一个事件驱动、非阻塞式I/
 <span id="more"></span>
 <h2 id="node.js维基百科的解释"><a
 target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Node.js">node.js维基百科</a>的解释</h2>
-<p>前三段如下： &gt; Node.js 是能够在服务器端运行 JavaScript
+<p>前三段如下：</p>
+<blockquote>
+<p>Node.js 是能够在服务器端运行 JavaScript
 的开放源代码、跨平台执行环境。Node.js 由 OpenJS Foundation （原为
 Node.js Foundation，已与 JS Foundation 合并）持有和维护，亦为 Linux
 基金会的项目。Node.js 采用 Google 开发的 V8
-执行代码，使用事件驱动、非阻塞和异步IO模型等技术来提高性能，可优化应用程序的传输量和规模。这些技术通常用于资料密集的即时应用程序。
-&gt; &gt; Node.js 大部分基本模块都用 JavaScript 语言编写。在 Node.js
+执行代码，使用事件驱动、非阻塞和异步IO模型等技术来提高性能，可优化应用程序的传输量和规模。这些技术通常用于资料密集的即时应用程序。</p>
+<p>Node.js 大部分基本模块都用 JavaScript 语言编写。在 Node.js
 出现之前，JavaScript 通常作为客户端程序设计语言使用，以JavaScript
 写出的程序常在用户的浏览器上执行。Node.js 的出现使 JavaScript
 也能用于服务端编程。Node.js 含有一系列内置模块，使得程序可以脱离 Apache
-HTTP Server 或 IIS，作为独立服务器执行。 &gt; &gt; 目前，Node.js
+HTTP Server 或 IIS，作为独立服务器执行。</p>
+<p>目前，Node.js
 已被IBM、Microsoft、Yahoo!、Walmart、Groupon、SAP、LinkedIn、Rakuten、PayPal、Voxer、GoDaddy等企业采用。</p>
+</blockquote>
 <p>Node.js将JavaScript这一只在客户端浏览器上运行的程序语言，扩展到了服务器端编程。
 新的问题：</p>
 <ul>
@@ -357,35 +363,50 @@ HTTP Server 或 IIS，作为独立服务器执行。 &gt; &gt; 目前，Node.js
 <ol type="1">
 <li><p><strong>V8引擎</strong>：V8是一个由Google开发的开源JavaScript引擎，用于Google
 Chrome及Chromium中。V8在执行之前将JavaScript编译成了机器代码，而非字节码或是解释执行它，以此提升性能。V8还使用了如内联缓存（inline
-caching）等方法来提高性能。 &gt; Lars
-Bak是这个项目的组长，以V8发动机为其命名。V8发动机是一款8汽缸的V型发动机，在大型汽车中使用。</p></li>
+caching）等方法来提高性能。</p>
+<blockquote>
+<p>Lars
+Bak是这个项目的组长，以V8发动机为其命名。V8发动机是一款8汽缸的V型发动机，在大型汽车中使用。</p>
+</blockquote></li>
 <li><p><strong>事件驱动</strong>：事件驱动程序设计（Event-driven
-programming）是一种计算机程序设计模型。这种模型的程序执行流程是由用户的动作（如鼠标的按键，键盘的按键动作）或者是由其他程序的消息来决定的。图形用户界面类程序是典型的事件驱动设计方式。计算机操作系统也是事件驱动程序的典型示例。
-&gt; 对应概念：批处理程序设计（batch
-programming），程序执行的流程由程序员来决定。</p></li>
+programming）是一种计算机程序设计模型。这种模型的程序执行流程是由用户的动作（如鼠标的按键，键盘的按键动作）或者是由其他程序的消息来决定的。图形用户界面类程序是典型的事件驱动设计方式。计算机操作系统也是事件驱动程序的典型示例。</p>
+<blockquote>
+<p>对应概念：批处理程序设计（batch
+programming），程序执行的流程由程序员来决定。</p>
+</blockquote></li>
 <li><p><strong>非阻塞式I/O</strong>：<em>I/O</em>是从程序本身视角而言，指与系统磁盘或网络之间的交互；<em>阻塞</em>是指在
 Node.js 程序中，其它 JavaScript 语句的执行，必须等待一个非 JavaScript
 操作完成。（当阻塞发生时，事件循环无法继续运行
 JavaScript。）<em>非阻塞</em>则非如此，通过接受回调函数，可以在其它操作进行时（如读取文件）继续执行其它
-JavaScript 语句。 &gt; 阻塞|非阻塞 vs
-异步|同步：阻塞方法同步执行，非阻塞方法异步执行。</p></li>
-<li><p><strong>异步I/O</strong>：是计算机操作系统对输入输出的一种处理方式，即发起I/O请求的线程不等I/O操作完成，就继续执行随后的代码，I/O结果用其他方式通知发起I/O请求的程序。
-&gt;
-对应概念：同步（阻塞）I/O，即发起I/O请求的线程不从正在调用的I/O操作函数返回（即被阻塞），直至I/O操作完成。</p></li>
+JavaScript 语句。</p>
+<blockquote>
+<p>阻塞|非阻塞 vs 异步|同步：阻塞方法同步执行，非阻塞方法异步执行。</p>
+</blockquote></li>
+<li><p><strong>异步I/O</strong>：是计算机操作系统对输入输出的一种处理方式，即发起I/O请求的线程不等I/O操作完成，就继续执行随后的代码，I/O结果用其他方式通知发起I/O请求的程序。</p>
+<blockquote>
+<p>对应概念：同步（阻塞）I/O，即发起I/O请求的线程不从正在调用的I/O操作函数返回（即被阻塞），直至I/O操作完成。</p>
+</blockquote></li>
 </ol>
 <h1 id="了解与尝试">了解与尝试</h1>
 <p>B站视频：<a
 target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1PV411d7XV">node.js
-到底是什么鬼？</a> &gt; 啥是node，node有啥用，啥又是npm,
-package.json是个啥 node_modules里放的啥</p>
+到底是什么鬼？</a></p>
+<blockquote>
+<p>啥是node，node有啥用，啥又是npm,<br />
+package.json是个啥<br />
+node_modules里放的啥</p>
+</blockquote>
 <h2 id="npm"><a target="_blank" rel="noopener" href="https://www.npmjs.com">npm</a></h2>
 <p><a
 target="_blank" rel="noopener" href="https://nodejs.org">node.js</a>：基于v8引擎的JavaScript运行时（runtime，也即运行环境）。</p>
 <p><a target="_blank" rel="noopener" href="https://www.npmjs.com">npm</a>：Node.js附带的包管理器（Node
-package manager） &gt; npm是一个命令行工具，用于从NPM
-Registry中下载、安装Node.js程序，同时解决依赖问题。 &gt;
+package manager）</p>
+<blockquote>
+<p>npm是一个命令行工具，用于从NPM
+Registry中下载、安装Node.js程序，同时解决依赖问题。<br />
 <code>npm, Inc.</code>是Node package manager背后的公司，提供npm Registry
 和 npm CLI</p>
+</blockquote>
 <p>问题：</p>
 <ol type="1">
 <li>npm Registry 是什么？</li>
@@ -400,47 +421,53 @@ Registry中下载、安装Node.js程序，同时解决依赖问题。 &gt;
 </ul>
 <p>npm用来下载（安装）、管理（升级、删除）这些包。</p>
 <ul>
-<li>下载安装<code>jquery</code>、<code>lodash</code>（新建一个测试目录：nodeTest）
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;D:\MyStuday\nodeTest&quot;</span></span><br><span class="line">$ <span class="built_in">mkdir</span> test1</span><br><span class="line">$ <span class="built_in">cd</span> test1</span><br><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test1</span><br><span class="line">$ npm install jquery</span><br><span class="line">$ npm install lodash</span><br></pre></td></tr></table></figure></li>
-<li>删除<code>lodash</code> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall lodash</span><br></pre></td></tr></table></figure></li>
+<li><p>下载安装<code>jquery</code>、<code>lodash</code>（新建一个测试目录：nodeTest）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;D:\MyStuday\nodeTest&quot;</span></span><br><span class="line">$ <span class="built_in">mkdir</span> test1</span><br><span class="line">$ <span class="built_in">cd</span> test1</span><br><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test1</span><br><span class="line">$ npm install jquery</span><br><span class="line">$ npm install lodash</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除<code>lodash</code></li>
 </ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall lodash</span><br></pre></td></tr></table></figure>
 <p>在目录<code>test1\node_modules</code>下，相应package以单独文件夹的形式存在，package依赖信息记录在文件<code>package.json</code>和<code>package-lock.json</code>中，如：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json 两个package时</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lodash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.17.21&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// package-lock.json 一个package时</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lockfileVersion&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;requires&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;packages&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.6.0&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;node_modules/jquery&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;resolved&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;integrity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;resolved&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;integrity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json 两个package时</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lodash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.17.21&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// package-lock.json 一个package时</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lockfileVersion&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;requires&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;packages&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.6.0&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;node_modules/jquery&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;resolved&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;integrity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;jquery&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;resolved&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;integrity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 <hr />
 <h2 id="package.json">package.json</h2>
 <p>工程移交或上传时，仅提供 <code>package.json</code>
-文件即可，而无需对整个node_modules目录打包。 可根据
-<code>package.json</code>
+文件即可，而无需对整个node_modules目录打包。<br />
+可根据 <code>package.json</code>
 下载所依赖的package的指令为：<code>npm install</code>，或简写为
-<code>npm i</code> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i</span></span><br><span class="line">added 2 packages, and audited 3 packages in 3s</span><br></pre></td></tr></table></figure></p>
-<p>此外，在一个空目录下运行<code>npm init</code>，初始化该目录:
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test1</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ..</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> test2</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> test2</span></span><br><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test2</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm init</span></span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See `npm help init` for definitive documentation on these fields</span><br><span class="line">and exactly what they do.</span><br><span class="line"></span><br><span class="line">Use `npm install &lt;pkg&gt;` afterwards to install a package and</span><br><span class="line">save it as a dependency in the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">package name: (test2)</span><br><span class="line">version: (1.0.0)</span><br><span class="line">description:</span><br><span class="line">entry point: (index.js)</span><br><span class="line">test command:</span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC)</span><br><span class="line">About to write to D:\MyStuday\nodeTest\test2\package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;test2&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Is this OK? (yes) yes</span><br></pre></td></tr></table></figure></p>
+<code>npm i</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i</span></span><br><span class="line">added 2 packages, and audited 3 packages in 3s</span><br></pre></td></tr></table></figure>
+<p>此外，在一个空目录下运行<code>npm init</code>，初始化该目录:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test1</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ..</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> test2</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> test2</span></span><br><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/nodeTest/test2</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm init</span></span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See `npm help init` for definitive documentation on these fields</span><br><span class="line">and exactly what they do.</span><br><span class="line"></span><br><span class="line">Use `npm install &lt;pkg&gt;` afterwards to install a package and</span><br><span class="line">save it as a dependency in the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">package name: (test2)</span><br><span class="line">version: (1.0.0)</span><br><span class="line">description:</span><br><span class="line">entry point: (index.js)</span><br><span class="line">test command:</span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC)</span><br><span class="line">About to write to D:\MyStuday\nodeTest\test2\package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;test2&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Is this OK? (yes) yes</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><code>在package name: (test2)</code>停顿后，连续输入回车向后执行。</p>
 </blockquote>
-<p>生成一个<code>package.json</code> 文件: <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json ，空目录 npm init 生成</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test2&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;index.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-解释一下<code>package.json</code>：</p>
+<p>生成一个<code>package.json</code> 文件:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json ，空目录 npm init 生成</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test2&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;index.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>解释一下<code>package.json</code>：</p>
 <blockquote>
 <p>过程中输入<code>npm i jquery</code>安装一个包，<code>package.json</code>文件内增加<code>dependencies</code>项；
 node_modules<code>package.json</code>文件，描述<code>jquery</code>的信息和依赖项。</p>
 </blockquote>
 <ul>
-<li>main：入口文件，告诉引用者从哪里开始执行；</li>
-<li>scripts：脚本命令集，比如上述文件定义了<code>test</code>脚本命令，可<code>npm run</code>执行，结果如下</li>
+<li><p>main：入口文件，告诉引用者从哪里开始执行；</p></li>
+<li><p>scripts：脚本命令集，比如上述文件定义了<code>test</code>脚本命令，可<code>npm run</code>执行，结果如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm run <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">test2@1.0.0 <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">echo</span> <span class="string">&quot;Error: no test specified&quot;</span> &amp;&amp; <span class="built_in">exit</span> 1   <span class="comment"># 脚本命令语句</span></span></span><br><span class="line"></span><br><span class="line">&quot;Error: no test specified&quot;   # 执行结果，打印信息</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm run <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">test2@1.0.0 <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">echo</span> <span class="string">&quot;Error: no test specified&quot;</span> &amp;&amp; <span class="built_in">exit</span> 1   <span class="comment"># 脚本命令语句</span></span></span><br><span class="line"></span><br><span class="line">&quot;Error: no test specified&quot;   # 执行结果，打印信息</span><br></pre></td></tr></table></figure>
-<p>多条脚本每行结束要有逗号<code>,</code>，如 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;test_ls&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ls -l&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure></p>
+<p>多条脚本每行结束要有逗号<code>,</code>，如</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;test_ls&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ls -l&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 <p>执行第二条脚本<code>test_ls</code>：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm run test_ls</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">test2@1.0.0 test_ls</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">ls</span> -l</span></span><br><span class="line"></span><br><span class="line">total 6</span><br><span class="line">drwxr-xr-x 1 JING 197609   0 May 13 18:58 node_modules</span><br><span class="line">-rw-r--r-- 1 JING 197609 774 May 13 18:58 package-lock.json</span><br><span class="line">-rw-r--r-- 1 JING 197609 273 May 13 19:17 package.json</span><br><span class="line">-rw-r--r-- 1 JING 197609 272 May 13 19:16 package.json.bak</span><br></pre></td></tr></table></figure>
-<h2 id="扩展概念-1">扩展概念</h2>
+<h2 id="概念扩展">概念扩展</h2>
 <ol type="1">
 <li><p>npm
 Registry：npm模块仓库提供了一个名为“registry”的查询服务，用户可通过本地的npm命令下载并安装指定模块。此外用户也可以通过npm把自己设计的模块分发到registry上面。registry上面的模块通常采用CommonJS格式，而且都包含一个JSON格式的元文件。</p></li>
 <li><p>npm CLI：npm 的 command-line interface（命令行界面）。</p>
 <blockquote>
-CLI
+<p>CLI
 通常不支持鼠标（也可支持），用户通过键盘输入指令，计算机接收到指令后，予以执行。又称字符用户界面（character
-user interface, CUI）。常用的CLI，如
+user interface, CUI）。常用的CLI，如</p>
 <ul>
 <li>bash / sh / ksh / csh / zsh（Unix-like系统）</li>
 <li>COMMAND.COM（MS-DOS系统）</li>
@@ -526,14 +553,14 @@ user interface, CUI）。常用的CLI，如
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">188k</span>
+    <span title="Symbols count total">187k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">2:51</span>
+    <span title="Reading time total">2:50</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>

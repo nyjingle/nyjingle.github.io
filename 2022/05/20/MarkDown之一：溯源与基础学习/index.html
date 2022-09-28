@@ -29,7 +29,7 @@
 <meta property="og:description" content="如果只是想用 Markdown 记录一些东西，还有不错的排版，也许只需要了解发明人 JOHN GRUBER 对 Markdown 的定义和坚持就 OK 了：语法简单，书写自由，基本够用。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-20T12:57:53.000Z">
-<meta property="article:modified_time" content="2022-05-20T13:18:35.120Z">
+<meta property="article:modified_time" content="2022-09-28T07:09:55.829Z">
 <meta property="article:author" content="Jun Jing">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
@@ -315,9 +315,15 @@ Overview
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-05-20 20:57:53 / Modified: 21:18:35" itemprop="dateCreated datePublished" datetime="2022-05-20T20:57:53+08:00">2022-05-20</time>
+      <time title="Created: 2022-05-20 20:57:53" itemprop="dateCreated datePublished" datetime="2022-05-20T20:57:53+08:00">2022-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-28 15:09:55" itemprop="dateModified" datetime="2022-09-28T15:09:55+08:00">2022-09-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -378,15 +384,15 @@ target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdow
 title="MarkDown Author">JOHN GRUBER</a> 对 Markdown 的定义和坚持就 OK
 了：语法简单，书写自由，基本够用。</p>
 <span id="more"></span>
-<p><strong><em>[目录]</em></strong> - <a
-href="#1_material">一、资料</a></p>
+<p><strong><em>[目录]</em></strong></p>
 <ul>
-<li><a href="#2_original">二、溯源</a>
+<li><p><a href="#1_material">一、资料</a></p></li>
+<li><p><a href="#2_original">二、溯源</a></p>
 <ul>
 <li><a href="#定义">定义</a></li>
 <li><a href="#版权声明">版权声明</a></li>
 </ul></li>
-<li><a href="#3_basics">三、语法要点</a>
+<li><p><a href="#3_basics">三、语法要点</a></p>
 <ul>
 <li><a href="#paragraph">段落、标题、引用 | Paragraphs,
 Headers,Blockquotes</a></li>
@@ -396,7 +402,7 @@ Headers,Blockquotes</a></li>
 <li><a href="#images">图像 | Images</a></li>
 <li><a href="#code">代码 | Code</a></li>
 </ul></li>
-<li><a href="#syntax">四、语法详解</a>
+<li><p><a href="#syntax">四、语法详解</a></p>
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#block">Block Elements</a></li>
@@ -432,35 +438,43 @@ Community</a>：GitHub上的MarkDown社区</li>
 文档的内容在原始状态下就易于书写和易于阅读。</p>
 <h2 id="定义">定义</h2>
 <p>by <a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/"
-title="MarkDown Author">JOHN GRUBER</a> &gt;Markdown is a
-<strong>text-to-HTML conversion tool for web writers</strong>. Markdown
-allows you to write using an easy-to-read, easy-to-write plain text
-format, then convert it to <em>structurally valid XHTML (or HTML)</em>.
-Thus, “Markdown” is two things: <strong>(1) a plain text formatting
-syntax</strong>; and <strong>(2) a software tool, written in Perl, that
-converts the plain text formatting to HTML</strong>. &gt; &gt; The
-overriding design goal for Markdown’s formatting syntax is to make it
-<em>as readable as possible</em>. The idea is that a Markdown-formatted
-document should be publishable as-is, as plain text, without looking
-like it’s been marked up with tags or formatting instructions. While
-Markdown’s syntax has been influenced by several existing text-to-HTML
-filters, the single biggest source of inspiration for Markdown’s syntax
-is the format of plain text email.</p>
-<p>by <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a> &gt;
-Markdown是一种<strong>轻量级标记语言</strong>，创始人为约翰·格鲁伯。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。
+title="MarkDown Author">JOHN GRUBER</a></p>
+<blockquote>
+<p>Markdown is a <strong>text-to-HTML conversion tool for web
+writers</strong>. Markdown allows you to write using an easy-to-read,
+easy-to-write plain text format, then convert it to <em>structurally
+valid XHTML (or HTML)</em>. Thus, “Markdown” is two things: <strong>(1)
+a plain text formatting syntax</strong>; and <strong>(2) a software
+tool, written in Perl, that converts the plain text formatting to
+HTML</strong>.</p>
+<p>The overriding design goal for Markdown’s formatting syntax is to
+make it <em>as readable as possible</em>. The idea is that a
+Markdown-formatted document should be publishable as-is, as plain text,
+without looking like it’s been marked up with tags or formatting
+instructions. While Markdown’s syntax has been influenced by several
+existing text-to-HTML filters, the single biggest source of inspiration
+for Markdown’s syntax is the format of plain text email.</p>
+</blockquote>
+<p>by <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a></p>
+<blockquote>
+<p>Markdown是一种<strong>轻量级标记语言</strong>，创始人为约翰·格鲁伯。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。
 由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。如GitHub、Reddit、Diaspora、Stack
 Exchange、OpenStreetMap
 、SourceForge、简书等，甚至还能被用来撰写电子书。</p>
+</blockquote>
 <p>[注] XHTML（可扩展超文本标记语言, eXtensible HyperText Markup
-Language）： &gt; -
-一种标记语言，表现方式与超文本标记语言（HTML）类似，不过语法上更加严格。
-&gt; -
-从继承关系上讲，HTML是一种基于标准通用标记语言（SGML）的应用，是一种非常灵活的置标语言，而XHTML则基于<em>可扩展标记语言（XML）</em>，XML是SGML的一个子集。<strong>XHTML
-is part of the family of XML markup languages.</strong> &gt; -
-XHTML1.1为XHTML最后的独立标准，2.0止于草案阶段。 &gt; -
-<strong>XHTML5则是属于HTML5标准的一部分，且名称已改为“以XML序列化的HTML5”</strong>（<em>an
+Language）：</p>
+<blockquote>
+<ul>
+<li>一种标记语言，表现方式与超文本标记语言（HTML）类似，不过语法上更加严格。</li>
+<li>从继承关系上讲，HTML是一种基于标准通用标记语言（SGML）的应用，是一种非常灵活的置标语言，而XHTML则基于<em>可扩展标记语言（XML）</em>，XML是SGML的一个子集。<strong>XHTML
+is part of the family of XML markup languages.</strong></li>
+<li>XHTML1.1为XHTML最后的独立标准，2.0止于草案阶段。</li>
+<li><strong>XHTML5则是属于HTML5标准的一部分，且名称已改为“以XML序列化的HTML5”</strong>（<em>an
 XML adaptation of the HTML5
-specification</em>），而非“可扩展的HTML”。</p>
+specification</em>），而非“可扩展的HTML”。</li>
+</ul>
+</blockquote>
 <h2 id="版权声明">版权声明</h2>
 <p><a
 target="_blank" rel="noopener" href="https://daringfireball.net/projects/downloads/Markdown_1.0.1.zip">Markdown
@@ -471,14 +485,18 @@ class="uri">http://daringfireball.net/</a><br />
 All rights reserved.</p>
 <p>Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
-met: * Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer. *
-Redistributions in binary form must reproduce the above copyright
+met:</p>
+<ul>
+<li>Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright
 notice, this list of conditions and the following disclaimer in the
-documentation and/or other materials provided with the distribution. *
-Neither the name "Markdown" nor the names of its contributors may be
+documentation and/or other materials provided with the
+distribution.</li>
+<li>Neither the name "Markdown" nor the names of its contributors may be
 used to endorse or promote products derived from this software without
-specific prior written permission.</p>
+specific prior written permission.</li>
+</ul>
 <p>This software is provided by the copyright holders and contributors
 "as is" and any express or implied warranties, including, but not
 limited to, the implied warranties of merchantability and fitness for a
@@ -490,20 +508,24 @@ profits; or business interruption) however caused and on any theory of
 liability, whether in contract, strict liability, or tort (including
 negligence or otherwise) arising in any way out of the use of this
 software, even if advised of the possibility of such damage.</p>
-<p><strong><em>++中文++：</em></strong> &gt;
-如果满足以下条件，则允许以源代码和二进制形式重新分发和使用，无论是否经过修改：
-&gt; * 重新分发源代码必须保留上述版权声明、此条件列表和以下免责声明。
-&gt; *
-以二进制形式重新分发必须在随分发提供的文档和/或其他材料中复制上述版权声明、此条件列表和以下免责声明。
-&gt; *
-未经事先书面许可，不得使用“Markdown”名称或其贡献者的名称来认可或推广源自本软件的产品。
-&gt; &gt;
-本软件由版权所有者和贡献者“按原样”提供，并且不提供任何明示或暗示的保证，包括但不限于对适销性和特定用途适用性的暗示保证。在任何情况下，版权所有者或贡献者均不对任何直接、间接、偶然、特殊、惩戒性或后果性损害（包括但不限于采购替代商品或服务；使用、数据或利润损失；或业务中断）以任何方式引起的以及任何责任理论，无论是合同、严格责任或因使用本软件而以任何方式引起的侵权（包括疏忽或其他），即使已被告知此类损害的可能性。</p>
-<p>注：以上基于BSD许可协议。 &gt; <strong>BSD许可协议（Berkeley Software
-Distribution license）</strong>
+<p><strong><em>++中文++：</em></strong></p>
+<blockquote>
+<p>如果满足以下条件，则允许以源代码和二进制形式重新分发和使用，无论是否经过修改：</p>
+<ul>
+<li>重新分发源代码必须保留上述版权声明、此条件列表和以下免责声明。</li>
+<li>以二进制形式重新分发必须在随分发提供的文档和/或其他材料中复制上述版权声明、此条件列表和以下免责声明。</li>
+<li>未经事先书面许可，不得使用“Markdown”名称或其贡献者的名称来认可或推广源自本软件的产品。</li>
+</ul>
+<p>本软件由版权所有者和贡献者“按原样”提供，并且不提供任何明示或暗示的保证，包括但不限于对适销性和特定用途适用性的暗示保证。在任何情况下，版权所有者或贡献者均不对任何直接、间接、偶然、特殊、惩戒性或后果性损害（包括但不限于采购替代商品或服务；使用、数据或利润损失；或业务中断）以任何方式引起的以及任何责任理论，无论是合同、严格责任或因使用本软件而以任何方式引起的侵权（包括疏忽或其他），即使已被告知此类损害的可能性。</p>
+</blockquote>
+<p>注：以上基于BSD许可协议。</p>
+<blockquote>
+<p><strong>BSD许可协议（Berkeley Software Distribution
+license）</strong>
 是自由软件中使用最广泛的许可协议之一。BSD许可证被认为是copycenter（中间著作权），介乎标准的copyright与GPL的copyleft之间。"Take
 it down to the copy center and make as many copies as you
 want"。可以说，GPL强迫后续版本必须一样是自由软件，BSD的后续版本可以选择要继续是BSD或其他自由软件条款或封闭软件等等。</p>
+</blockquote>
 <hr />
 <h1 id="3_basics">
 三、语法要点
@@ -1493,14 +1515,14 @@ _   underscore
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">188k</span>
+    <span title="Symbols count total">187k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">2:51</span>
+    <span title="Reading time total">2:50</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
