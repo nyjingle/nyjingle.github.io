@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 NB.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="0.467793in" height="0.498775in"
+		viewBox="0 0 33.6811 35.9118" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#0c0c0c;stroke:none;stroke-linecap:butt;stroke-width:1.25}
+		.st2 {fill:none;stroke:none;stroke-linecap:butt;stroke-width:1.25}
+		.st3 {fill:#ffffff;font-family:HGB7_CNKI;font-size:1.58334em}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(1.25,-3.4807)">
+			<title>八边形</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M22.05 4.73 L9.13 4.73 L0 13.86 L0 26.78 L9.13 35.91 L22.05 35.91 L31.18 26.78 L31.18 13.86 L22.05 4.73 Z"
+					class="st1"/>
+		</g>
+		<g id="shape2-3" v:mID="2" v:groupContext="shape" transform="translate(8.48668,-18.9647)">
+			<title>工作表.2</title>
+			<desc>N</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="5.90661" cy="30.6362" width="11.82" height="10.5513"/>
+			<rect x="0" y="25.3605" width="11.8132" height="10.5513" class="st2"/>
+			<text x="0" y="35.39" class="st3" v:langID="2052"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>N</text>		</g>
+		<g id="shape3-6" v:mID="3" v:groupContext="shape" transform="translate(13.6813,-4.2245)">
+			<title>工作表.3</title>
+			<desc>B</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="5.90661" cy="30.6362" width="11.82" height="10.5513"/>
+			<rect x="0" y="25.3605" width="11.8132" height="10.5513" class="st2"/>
+			<text x="0" y="35.39" class="st3" v:langID="2052"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>B</text>		</g>
+	</g>
+</svg>

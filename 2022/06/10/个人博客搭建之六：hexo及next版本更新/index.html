@@ -7,10 +7,10 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nb-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nb-33x33.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nb-15x15.png">
+  <link rel="mask-icon" href="/images/nb.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -29,7 +29,7 @@
 <meta property="og:description" content="涉及到本博客所用以下工具，皆更新到最新版本：  node.js: 16.15.1 (npm 8.11.0) git: 2.36.1 hexo: 6.2.0 hexo-renderer-stylus: 2.1.0 webpack: 5.73.0 next: 8.12.1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-06-10T05:27:59.000Z">
-<meta property="article:modified_time" content="2022-09-26T08:00:52.938Z">
+<meta property="article:modified_time" content="2022-09-28T09:04:36.865Z">
 <meta property="article:author" content="Jun Jing">
 <meta property="article:tag" content="node.js">
 <meta property="article:tag" content="git">
@@ -151,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6-hexo-%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">更新博客框架 HEXO 及相关工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-git-%E5%92%8C-node.js"><span class="nav-number">1.1.</span> <span class="nav-text">更新 git 和 node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">尝试命令行更新方式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-hexo"><span class="nav-number">1.2.</span> <span class="nav-text">更新 Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98-next"><span class="nav-number">2.</span> <span class="nav-text">更新主题 next</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0"><span class="nav-number">2.1.</span> <span class="nav-text">版本更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%96%B0%E7%89%88%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%BC%98%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">基于新版主题的设置优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alternate-theme-config"><span class="nav-number">2.2.1.</span> <span class="nav-text">Alternate Theme Config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">操作</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6-hexo-%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">更新博客框架 HEXO 及相关工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-git-%E5%92%8C-node.js"><span class="nav-number">1.1.</span> <span class="nav-text">更新 git 和 node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">尝试命令行更新方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-hexo"><span class="nav-number">1.2.</span> <span class="nav-text">更新 Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98-next"><span class="nav-number">2.</span> <span class="nav-text">更新主题 next</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0"><span class="nav-number">2.1.</span> <span class="nav-text">版本更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%96%B0%E7%89%88%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%BC%98%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">基于新版主题的设置优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alternate-theme-config"><span class="nav-number">2.2.1.</span> <span class="nav-text">Alternate Theme Config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">操作</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +166,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -270,7 +270,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-26 16:00:52" itemprop="dateModified" datetime="2022-09-26T16:00:52+08:00">2022-09-26</time>
+      <time title="Modified: 2022-09-28 17:04:36" itemprop="dateModified" datetime="2022-09-28T17:04:36+08:00">2022-09-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -307,7 +307,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>6.8k</span>
+      <span>6.7k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -345,24 +345,34 @@ target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>的�
 target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，以及推荐的 <a
 target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a> 版本。</p>
 <h2 id="更新-git-和-node.js">更新 git 和 node.js</h2>
-<p>原版本： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git version</span></span><br><span class="line">git version 2.36.0.windows.1</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">node -v</span></span><br><span class="line">v16.15.0</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm -v</span></span><br><span class="line">8.5.5</span><br></pre></td></tr></table></figure></p>
-<p><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> 版本更新：2.36.0 --&gt; 2.36.1
-&gt;https://git-scm.com/download/win &gt; 下载，全部默认更新安装</p>
+<p>原版本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git version</span></span><br><span class="line">git version 2.36.0.windows.1</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">node -v</span></span><br><span class="line">v16.15.0</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm -v</span></span><br><span class="line">8.5.5</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> 版本更新：2.36.0 --&gt;
+2.36.1</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win"
+class="uri">https://git-scm.com/download/win</a>
+下载，全部默认更新安装</p>
+</blockquote>
 <p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>
 版本(LTS)更新：v16.15.0 --&gt; v16.15.1 &gt; 下载，全部默认更新安装</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm -v</span></span><br><span class="line">npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.</span><br><span class="line">8.11.0</span><br></pre></td></tr></table></figure>
 <p>npm的版本随<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>更新：8.5.5
 --&gt; 8.11.0</p>
-<h3 id="尝试命令行更新方式">尝试命令行更新方式：</h3>
+<h3 id="尝试命令行更新方式">尝试命令行更新方式</h3>
 <p>Windows系统，除了常规的安装包下载更新 <a
 target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a>
 之外，还可通过命令行方式的进行版本检查和更新。
 前提是要先安装<code>n</code>模块（Node的版本管理），再用
 <code>n lts</code> 或 <code>n stable</code> 来检查并升级到最新 LTS
-稳定版。 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install -g n</span></span><br><span class="line">npm ERR! code EBADPLATFORM</span><br><span class="line">npm ERR! notsup Unsupported platform for n@8.2.0: wanted &#123;&quot;os&quot;:&quot;!win32&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line">npm ERR! notsup Valid OS:    !win32</span><br><span class="line">npm ERR! notsup Valid Arch:  undefined</span><br><span class="line">npm ERR! notsup Actual OS:   win32</span><br><span class="line">npm ERR! notsup Actual Arch: x64</span><br></pre></td></tr></table></figure> 提示操作系统（win32）不支持。有帖子称可强制安装
+稳定版。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install -g n</span></span><br><span class="line">npm ERR! code EBADPLATFORM</span><br><span class="line">npm ERR! notsup Unsupported platform for n@8.2.0: wanted &#123;&quot;os&quot;:&quot;!win32&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line">npm ERR! notsup Valid OS:    !win32</span><br><span class="line">npm ERR! notsup Valid Arch:  undefined</span><br><span class="line">npm ERR! notsup Actual OS:   win32</span><br><span class="line">npm ERR! notsup Actual Arch: x64</span><br></pre></td></tr></table></figure>
+<p>提示操作系统（win32）不支持。有帖子称可强制安装
 <code>npm install -g n --force</code> ，我觉得没必要。</p>
 <h2 id="更新-hexo">更新 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a></h2>
-<p>版本检查： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo version</span></span><br><span class="line">hexo: 6.1.0</span><br><span class="line">hexo-cli: 4.3.0</span><br><span class="line">os: win32 10.0.19044</span><br><span class="line">node: 16.15.1</span><br><span class="line">v8: 9.4.146.24-node.20</span><br><span class="line">uv: 1.43.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.9</span><br><span class="line">ares: 1.18.1</span><br><span class="line">modules: 93</span><br><span class="line">nghttp2: 1.47.0</span><br><span class="line">napi: 8</span><br><span class="line">llhttp: 6.0.4</span><br><span class="line">openssl: 1.1.1n+quic</span><br><span class="line">cldr: 40.0</span><br><span class="line">icu: 70.1</span><br><span class="line">tz: 2021a3</span><br><span class="line">unicode: 14.0</span><br><span class="line">ngtcp2: 0.1.0-DEV</span><br><span class="line">nghttp3: 0.1.0-DEV</span><br></pre></td></tr></table></figure> 注：<a
+<p>版本检查：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo version</span></span><br><span class="line">hexo: 6.1.0</span><br><span class="line">hexo-cli: 4.3.0</span><br><span class="line">os: win32 10.0.19044</span><br><span class="line">node: 16.15.1</span><br><span class="line">v8: 9.4.146.24-node.20</span><br><span class="line">uv: 1.43.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.9</span><br><span class="line">ares: 1.18.1</span><br><span class="line">modules: 93</span><br><span class="line">nghttp2: 1.47.0</span><br><span class="line">napi: 8</span><br><span class="line">llhttp: 6.0.4</span><br><span class="line">openssl: 1.1.1n+quic</span><br><span class="line">cldr: 40.0</span><br><span class="line">icu: 70.1</span><br><span class="line">tz: 2021a3</span><br><span class="line">unicode: 14.0</span><br><span class="line">ngtcp2: 0.1.0-DEV</span><br><span class="line">nghttp3: 0.1.0-DEV</span><br></pre></td></tr></table></figure>
+<p>注：<a
 target="_blank" rel="noopener" href="https://one-more-tech.gitlab.io/Hexo-%E4%B8%8E-Hexo-cli-%E7%9A%84%E5%85%B3%E7%B3%BB%E3%80%81%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/index/">Hexo
 与 Hexo-cli 的关系</a></p>
 <blockquote>
@@ -370,27 +380,37 @@ target="_blank" rel="noopener" href="https://one-more-tech.gitlab.io/Hexo-%E4%B8
 project. When project was created, all the things doing with hexo
 module.</p>
 </blockquote>
-<p>hexo-cli 最新版 4.3.0，无需更新。
-https://github.com/hexojs/hexo-cli/releases</p>
-<p>hexo 最新版 6.2.0，需更新。
-https://github.com/hexojs/hexo/releases</p>
-<p><strong>更新操作借鉴</strong>： - 知乎帖子：<a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157511323">将 Hexo 升级到 v4.2.1</a>
-- CSDN帖子：<a
+<p>hexo-cli 最新版 4.3.0，无需更新。 <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-cli/releases"
+class="uri">https://github.com/hexojs/hexo-cli/releases</a></p>
+<p>hexo 最新版 6.2.0，需更新。 <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/releases"
+class="uri">https://github.com/hexojs/hexo/releases</a></p>
+<p><strong>更新操作借鉴</strong>：</p>
+<ul>
+<li>知乎帖子：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157511323">将 Hexo
+升级到 v4.2.1</a></li>
+<li>CSDN帖子：<a
 target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33306246/article/details/107598101">Hexo
-和Next主题升级</a></p>
+和Next主题升级</a></li>
+</ul>
 <ol type="1">
 <li><p>进入 Hexo (blog) 的目录，<code>npm outdated</code>检查一下有哪些
-Package 已经过期了： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/git_codelife/Blog</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm outdated</span></span><br><span class="line">Package               Current  Wanted  Latest  Location                     Depended by</span><br><span class="line">hexo                    6.1.0   6.2.0   6.2.0  node_modules/hexo                  Blog</span><br><span class="line">hexo-renderer-stylus    2.0.1   2.1.0   2.1.0  node_modules/hexo-renderer-stylus  Blog</span><br></pre></td></tr></table></figure></p></li>
-<li><p><code>npm update</code>更新之： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm update</span></span><br><span class="line">added 2 packages, removed 14 packages, changed 44 packages, and audited 253 packages in 29s</span><br><span class="line"></span><br><span class="line">3 moderate severity vulnerabilities</span><br><span class="line"></span><br><span class="line">To address all issues (including breaking changes), run:</span><br><span class="line">  npm audit fix --force</span><br><span class="line"></span><br><span class="line">Run `npm audit` for details.</span><br></pre></td></tr></table></figure> &gt;
-似乎不仅仅更新了<code>hexo</code> 和
-<code>hexo-renderer-stylus</code>；其与警告信息暂忽略。</p></li>
+Package 已经过期了：</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/git_codelife/Blog</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm outdated</span></span><br><span class="line">Package               Current  Wanted  Latest  Location                     Depended by</span><br><span class="line">hexo                    6.1.0   6.2.0   6.2.0  node_modules/hexo                  Blog</span><br><span class="line">hexo-renderer-stylus    2.0.1   2.1.0   2.1.0  node_modules/hexo-renderer-stylus  Blog</span><br></pre></td></tr></table></figure></p></li>
+<li><p><code>npm update</code>更新之：</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm update</span></span><br><span class="line">added 2 packages, removed 14 packages, changed 44 packages, and audited 253 packages in 29s</span><br><span class="line"></span><br><span class="line">3 moderate severity vulnerabilities</span><br><span class="line"></span><br><span class="line">To address all issues (including breaking changes), run:</span><br><span class="line">  npm audit fix --force</span><br><span class="line"></span><br><span class="line">Run `npm audit` for details.</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>似乎不仅仅更新了<code>hexo</code> 和
+<code>hexo-renderer-stylus</code>；其与警告信息暂忽略。</p>
+</blockquote></li>
 <li><p>检查，hexo版本已更新：6.1.0--&gt;6.2.0</p></li>
-<li><p><code>npm outdated -g</code>检查其它 Package 是否过期，更新
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm outdated -g</span></span><br><span class="line">Package  Current  Wanted  Latest  Location              Depended by</span><br><span class="line">webpack   5.72.0  5.73.0  5.73.0  node_modules/webpack  global</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install webpack -g</span></span><br><span class="line">added 7 packages, removed 6 packages, changed 69 packages, and audited 77 packages in 11s</span><br></pre></td></tr></table></figure></p></li>
+<li><p><code>npm outdated -g</code>检查其它 Package 是否过期，更新</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm outdated -g</span></span><br><span class="line">Package  Current  Wanted  Latest  Location              Depended by</span><br><span class="line">webpack   5.72.0  5.73.0  5.73.0  node_modules/webpack  global</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install webpack -g</span></span><br><span class="line">added 7 packages, removed 6 packages, changed 69 packages, and audited 77 packages in 11s</span><br></pre></td></tr></table></figure></p></li>
 <li><p><code>npm view webpack version</code>检查，webpack
-版本已更新：5.72.0 --&gt; 5.73.0 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm view webpack version</span></span><br><span class="line">5.73.0</span><br></pre></td></tr></table></figure> 注：<a
-href="webpackjs.com">webpack</a> 是一个现代 JavaScript
+版本已更新：5.72.0 --&gt; 5.73.0</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm view webpack version</span></span><br><span class="line">5.73.0</span><br></pre></td></tr></table></figure></p>
+<p>注：<a href="webpackjs.com">webpack</a> 是一个现代 JavaScript
 应用程序的静态模块打包器(module bundler).</p></li>
 </ol>
 <h1 id="更新主题-next">更新主题 next</h1>
@@ -399,22 +419,31 @@ href="webpackjs.com">webpack</a> 是一个现代 JavaScript
 <p>目标新版本：v8.12.1</p>
 <p>历史原因，next主题不同版本对应仓库如下：</p>
 <ul>
-<li><p>v6 ~ v7：https://github.com/theme-next/hexo-theme-next （ 2018 ~
+<li><p>v6 ~ v7：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next"
+class="uri">https://github.com/theme-next/hexo-theme-next</a> （ 2018 ~
 2019）</p>
 <blockquote>
-<p>对应官网：https://theme-next.org/</p>
+<p>对应官网：<a target="_blank" rel="noopener" href="https://theme-next.org/"
+class="uri">https://theme-next.org/</a></p>
 </blockquote></li>
-<li><p>v8：https://github.com/next-theme/hexo-theme-next （2020 ~ ）</p>
+<li><p>v8：<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next"
+class="uri">https://github.com/next-theme/hexo-theme-next</a> （2020 ~
+）</p>
 <blockquote>
-<p>对应官网：https://theme-next.js.org/</p>
+<p>对应官网：<a target="_blank" rel="noopener" href="https://theme-next.js.org/"
+class="uri">https://theme-next.js.org/</a></p>
 </blockquote></li>
 </ul>
 <p>以下更新参考 <a target="_blank" rel="noopener" href="https://theme-next.js.org/">theme-next</a>
 的官方文档：</p>
 <blockquote>
-<p>https://theme-next.js.org/docs/getting-started/</p>
-<p>https://theme-next.js.org/docs/getting-started/installation.html</p>
-<p>https://theme-next.js.org/docs/getting-started/upgrade.html</p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/"
+class="uri">https://theme-next.js.org/docs/getting-started/</a><br />
+<a
+target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/installation.html"
+class="uri">https://theme-next.js.org/docs/getting-started/installation.html</a><br />
+<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/upgrade.html"
+class="uri">https://theme-next.js.org/docs/getting-started/upgrade.html</a></p>
 </blockquote>
 <p><em>NexT suggest to upgrade from version 5 or 7 to version 8 in this
 way:</em></p>
@@ -449,20 +478,30 @@ can switch back to the old version at any time.</li>
 </ol>
 </blockquote>
 <ol type="1">
-<li><p>安装 Next Theme： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JING@LAPTOP-DEHH91FV MINGW64 /d/MyStuday/git_codelife/Blog</span><br><span class="line">$ npm install hexo-theme-next</span><br><span class="line">added 1 package, and audited 254 packages in 2s</span><br><span class="line">$ npm view hexo-theme-next version</span><br><span class="line">8.12.1</span><br></pre></td></tr></table></figure> &gt;
-安装位置：Blog_modules-theme-next，版本8.12.1为最新版。 &gt;&gt;
-注：原v7版安装，是从github复制整个主题仓库到<code>theme\next</code>，手动改yml配置文件。</p></li>
-<li><p>v7版本文件Copy：<code>theme\next\_config.yml</code> &gt;
-无自定义的css、layout等；</p></li>
+<li><p>安装 Next Theme：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-theme-next</span></span><br><span class="line">added 1 package, and audited 254 packages in 2s</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm view hexo-theme-next version</span></span><br><span class="line">8.12.1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>安装位置：Blog_modules-theme-next，版本8.12.1为最新版。 &gt;
+注：原v7版安装，是从github复制整个主题仓库到<code>theme\next</code>，手动改yml配置文件。</p>
+</blockquote></li>
+<li><p>v7版本文件Copy：<code>theme\next\_config.yml</code></p>
+<blockquote>
+<p>无自定义的css、layout等；</p>
+</blockquote></li>
 <li><p>v7版主题文件夹（<code>themes\next</code>）更名为<code>next_v7</code>；</p></li>
-<li><p>更新安装最新版主题：<code>npm install hexo-theme-next@latest</code>
-&gt; 提示：up to date</p></li>
+<li><p>更新安装最新版主题：<code>npm install hexo-theme-next@latest</code></p>
+<blockquote>
+<p>提示：up to date</p>
+</blockquote></li>
 <li><p>博客配置文件 <code>Blog\_config.yml</code>
-设置主题：<code>theme: next</code> &gt;
-实际无更改，因next主题名称未变；</p></li>
-<li><p>检查，本地服务启动：http://localhost:4000 无问题。</p></li>
+设置主题：<code>theme: next</code></p>
+<blockquote>
+<p>实际无更改，因next主题名称未变；</p>
+</blockquote></li>
+<li><p>检查，本地服务启动：<a target="_blank" rel="noopener" href="http://localhost:4000"
+class="uri">http://localhost:4000</a> 无问题。</p></li>
 </ol>
-<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
 <h2 id="基于新版主题的设置优化">基于新版主题的设置优化</h2>
 <p>After the installation of Hexo and NexT, you may found that there are
 two configuration files using by Hexo and both called
@@ -508,15 +547,19 @@ the highest priority during merging, then the dedicated theme
 configuration file. The <code>_config.yml</code> file under the theme
 directory has the lowest priority.</p>
 <h3 id="操作">操作</h3>
-<p>参考：https://theme-next.js.org/docs/getting-started/configuration.html</p>
+<p>参考：<a
+target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/configuration.html"
+class="uri">https://theme-next.js.org/docs/getting-started/configuration.html</a></p>
 <ol type="1">
-<li>拷贝next主题配置文件d到博客根目录，并重命名为<code>_config.next.yml</code>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Installed through npm</span><br><span class="line">cp node_modules/hexo-theme-next/_config.yml _config.next.yml</span><br></pre></td></tr></table></figure></li>
-<li>对照备份的v7版主题的<code>_config.yml</code>，修改完善<code>_config.next.yml</code>中相应项；额外给代码段增加
-<code>copy_button</code>： <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># All available themes: https://theme-next.js.org/highlight/</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">default</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">stackoverflow-dark</span></span><br><span class="line">  <span class="attr">prism:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">prism</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">prism-dark</span></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">    <span class="attr">style:</span></span><br></pre></td></tr></table></figure></li>
-<li>将个人头像文件<code>avatar.png</code>复制到<code>node_modules\hexo-theme-next\source\images\</code></li>
-<li>净化站点配置文件：将<code>_config.yml</code>中<code>symbols_count_time</code>的分散配置项统一转移到<code>_config.next.yml</code>。</li>
-<li>以下指令重新发布，效果OK！ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+<li><p>拷贝next主题配置文件d到博客根目录，并重命名为<code>_config.next.yml</code></p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Installed through npm</span></span><br><span class="line">cp node_modules/hexo-theme-next/_config.yml _config.next.yml</span><br></pre></td></tr></table></figure></p></li>
+<li><p>对照备份的v7版主题的<code>_config.yml</code>，修改完善<code>_config.next.yml</code>中相应项；额外给代码段增加
+<code>copy_button</code>：</p>
+<p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># All available themes: https://theme-next.js.org/highlight/</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">default</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">stackoverflow-dark</span></span><br><span class="line">  <span class="attr">prism:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">prism</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">prism-dark</span></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">    <span class="attr">style:</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>将个人头像文件<code>avatar.png</code>复制到<code>node_modules\hexo-theme-next\source\images\</code></p></li>
+<li><p>净化站点配置文件：将<code>_config.yml</code>中<code>symbols_count_time</code>的分散配置项统一转移到<code>_config.next.yml</code>。</p></li>
+<li><p>以下指令重新发布，效果OK！</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 
     </div>
@@ -599,14 +642,14 @@ directory has the lowest priority.</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">187k</span>
+    <span title="Symbols count total">195k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">2:50</span>
+    <span title="Reading time total">2:58</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>

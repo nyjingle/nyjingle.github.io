@@ -7,10 +7,10 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nb-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nb-33x33.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nb-15x15.png">
+  <link rel="mask-icon" href="/images/nb.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -29,7 +29,7 @@
 <meta property="og:description" content="参考：theme-next 官方文档之 Math Equations 通过修改 Next 主题配置文件_config.next.yml起用对数学公式的支持。选用MathJax渲染工具，并更改hexo默认的Markdown渲染引擎为hexo-renderer-pandoc，以更完美地支持数学公式。 公式的语法是广受欢迎的LaTex，示例了公式的编号、引用、对齐等常用操作。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-06-17T15:11:38.000Z">
-<meta property="article:modified_time" content="2022-06-17T15:28:48.556Z">
+<meta property="article:modified_time" content="2022-09-28T09:39:08.553Z">
 <meta property="article:author" content="Jun Jing">
 <meta property="article:tag" content="next">
 <meta property="article:tag" content="hexo">
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -260,9 +260,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-06-17 23:11:38 / Modified: 23:28:48" itemprop="dateCreated datePublished" datetime="2022-06-17T23:11:38+08:00">2022-06-17</time>
+      <time title="Created: 2022-06-17 23:11:38" itemprop="dateCreated datePublished" datetime="2022-06-17T23:11:38+08:00">2022-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-28 17:39:08" itemprop="dateModified" datetime="2022-09-28T17:39:08+08:00">2022-09-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -299,7 +305,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>5.5k</span>
+      <span>5.6k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -326,9 +332,10 @@ Equations</a></p>
 <p>公式的语法是广受欢迎的LaTex，示例了公式的编号、引用、对齐等常用操作。</p>
 <span id="more"></span>
 <h1 id="配置代码">配置代码</h1>
-<p>主题配置文件：<code>_config.next.yml</code> <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (false) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to true, it will load mathjax / katex script EVERY PAGE.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure> The
-<code>every_page</code> option controls whether to render Math Equations
-every page.
+<p>主题配置文件：<code>_config.next.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (false) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to true, it will load mathjax / katex script EVERY PAGE.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>The <code>every_page</code> option controls whether to render Math
+Equations every page.
 默认<code>false</code>，即公式的渲染按需提供，只会处理那些前面有
 <code>mathjax: true</code> 的帖子。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Will</span> <span class="string">Render</span> <span class="string">Math</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
@@ -336,16 +343,19 @@ every page.
 set the rendering engine.</p>
 <h1 id="渲染引擎">渲染引擎</h1>
 <h2 id="mathjax-or-katex">MathJax or KaTeX</h2>
-<p>两种 Math 引擎可使用： 1. <strong><a
-target="_blank" rel="noopener" href="https://www.mathjax.org/">MathJax</a></strong> is a JavaScript
-display engine for mathematics that works in all browsers. It is highly
-modular on input and output. Use MathML, TeX, and ASCIImath as input and
-produce HTML+CSS, SVG, or MathML as output. 2. <strong><a
-target="_blank" rel="noopener" href="https://katex.org/">KaTeX</a></strong> is a faster math rendering
-engine compared to MathJax 3. And it could survive without JavaScript.
-But, for now KaTeX supports less features than MathJax. Here is a list
-of <a target="_blank" rel="noopener" href="https://katex.org/docs/supported.html">TeX functions
-supported by KaTeX</a>.</p>
+<p>两种 Math 引擎可使用：</p>
+<ol type="1">
+<li><strong><a target="_blank" rel="noopener" href="https://www.mathjax.org/">MathJax</a></strong> is a
+JavaScript display engine for mathematics that works in all browsers. It
+is highly modular on input and output. Use MathML, TeX, and ASCIImath as
+input and produce HTML+CSS, SVG, or MathML as output.</li>
+<li><strong><a target="_blank" rel="noopener" href="https://katex.org/">KaTeX</a></strong> is a faster
+math rendering engine compared to MathJax 3. And it could survive
+without JavaScript. But, for now KaTeX supports less features than
+MathJax. Here is a list of <a
+target="_blank" rel="noopener" href="https://katex.org/docs/supported.html">TeX functions supported by
+KaTeX</a>.</li>
+</ol>
 <p>Firstly, you need to choose a rendering engine and turn on enable for
 it in NexT config file. Then you need to install the corresponding Hexo
 Renderer to fully support the display of Math Equations - Only turn on
@@ -358,34 +368,28 @@ target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-renderer-pand
 <h2 id="操作步骤">操作步骤</h2>
 <ol type="1">
 <li><p><code>_config.next.yml</code>中设置<code>mathjax</code>为<code>true</code></p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</blockquote></li>
+<p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p></li>
 <li><p>通过<code>npm</code>卸载原来使用的<code>hexo-renderer-marked</code>，安装<code>hexo-renderer-pandoc</code></p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm un hexo-renderer-marked</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i hexo-renderer-pandoc</span></span><br></pre></td></tr></table></figure>
-</blockquote></li>
-</ol>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm un hexo-renderer-marked</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i hexo-renderer-pandoc</span></span><br></pre></td></tr></table></figure></p>
 <p>MathJax 所需的各种扩展（extension）将自动加载。</p>
 <p>All extensions of MathJax are loaded automatically. For example,
 <code>mhchem</code> is a tool for writing beautiful chemical equations
 easily. It implements the <code>\ce</code> and <code>\pu</code> chemical
 equation macros of the LaTeX mhchem package. More information: <a
 target="_blank" rel="noopener" href="https://mhchem.github.io/MathJax-mhchem/">MathJax/mhchem
-Manual</a>.</p>
-<ol start="3" type="1">
+Manual</a>.</p></li>
 <li><p>删除原来试装的<code>hexo-math</code>（node_modules目录下可见），以免与Next内置的渲染引擎冲突。</p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm un hexo-math</span></span><br></pre></td></tr></table></figure>
-</blockquote></li>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm un hexo-math</span></span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <h2 id="测试"><strong>测试</strong></h2>
-<p>上述修改（数学引擎、Markdown引擎）后 &gt; please execute hexo clean.
-Run standard Hexo generate, deploy process or start the server to test
-whether the plugin is working properly:</p>
+<p>上述修改（数学引擎、Markdown引擎）后</p>
+<blockquote>
+<p>please execute hexo clean. Run standard Hexo generate, deploy process
+or start the server to test whether the plugin is working properly:</p>
+</blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo clean &amp;&amp; hexo g -d</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or hexo clean &amp;&amp; hexo s</span></span><br></pre></td></tr></table></figure>
 <p>如下<em>爱因斯坦质能方程</em>公式正常渲染显示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;equation&#125; </span><br><span class="line">e=mc^2</span><br><span class="line">\end&#123;equation&#125;$$</span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span><span class="keyword">\begin</span>&#123;equation&#125; </span><br><span class="line">e=mc<span class="built_in">^</span>2</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;<span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[\begin{equation}
 e=mc^2
 \end{equation}\]</span></p>
@@ -408,18 +412,17 @@ e=mc^2
 \end{equation}\]</span></p>
 <p>忽略了对公式<code>y=\sqrt&#123;mx&#125;</code>的编号。</p>
 <h2 id="公式引用">公式引用</h2>
-<p>How to refer to an equation? Just give a tag and then in your later
-text, use <span class="math inline">\(\ref{}\)</span> or <span
-class="math inline">\(\eqref{}\)</span> to refer it. Using <span
-class="math inline">\(\eqref{}\)</span> is preferred since if you use
-<span class="math inline">\(\ref{}\)</span>, there are no parentheses
+<p>How to refer to an equation? Just give a <code>\label&#123;&#125;</code> tag
+and then in your later text, use <code>\ref&#123;&#125;</code> or
+<code>\eqref&#123;&#125;</code> to refer it. Using <code>\eqref&#123;&#125;</code> is
+preferred since if you use <code>\ref&#123;&#125;</code>, there are no parentheses
 around the equation number.</p>
 <ol type="1">
 <li>为公式添加 <code>\label&#123;&#125;</code> 标签；</li>
 <li>文本中使用<code>\ref&#123;&#125;</code> 或 <code>\eqref&#123;&#125;</code> 引用；</li>
 <li><code>\eqref&#123;&#125;</code> 为引用的公式编号添加括号，推荐使用。</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;equation&#125; \label&#123;eq1&#125;</span><br><span class="line">e=mc^2</span><br><span class="line">\end&#123;equation&#125;$$</span><br><span class="line"></span><br><span class="line">The famous matter-energy equation $\eqref&#123;eq1&#125;$ proposed by Einstein...</span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span><span class="keyword">\begin</span>&#123;equation&#125; <span class="keyword">\label</span>&#123;eq1&#125;</span><br><span class="line">e=mc<span class="built_in">^</span>2</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;<span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"></span><br><span class="line">The famous matter-energy equation <span class="built_in">$</span><span class="keyword">\eqref</span>&#123;eq1&#125;<span class="built_in">$</span> proposed by Einstein...</span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[\begin{equation} \label{eq1}
 e=mc^2
 \end{equation}\]</span></p>
@@ -557,14 +560,14 @@ example:</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">187k</span>
+    <span title="Symbols count total">195k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">2:50</span>
+    <span title="Reading time total">2:58</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>

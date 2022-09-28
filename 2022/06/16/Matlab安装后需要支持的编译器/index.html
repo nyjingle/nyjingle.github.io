@@ -7,10 +7,10 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nb-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nb-33x33.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nb-15x15.png">
+  <link rel="mask-icon" href="/images/nb.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://cdnimg.mr-wu.cn/wp-content/uploads/2022/03/matlab-2022a.jpg">
 <meta property="og:image" content="https://nyjingle.github.io/images/matlab_compiler_win.png">
 <meta property="article:published_time" content="2022-06-16T10:07:42.000Z">
-<meta property="article:modified_time" content="2022-06-17T14:45:32.535Z">
+<meta property="article:modified_time" content="2022-09-28T09:13:49.896Z">
 <meta property="article:author" content="Jun Jing">
 <meta property="article:tag" content="Matlab">
 <meta property="article:tag" content="编译器">
@@ -167,7 +167,7 @@ Languages</span></a></li></ol></div>
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -271,7 +271,7 @@ Languages</span></a></li></ol></div>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-06-17 22:45:32" itemprop="dateModified" datetime="2022-06-17T22:45:32+08:00">2022-06-17</time>
+      <time title="Modified: 2022-09-28 17:13:49" itemprop="dateModified" datetime="2022-09-28T17:13:49+08:00">2022-09-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -391,16 +391,25 @@ providers' websites for further information.</p>
 <p>显然，MATLAB Product Family 是推荐选用 <code>MinGW 6.3 C/C++</code>
 的；</p>
 <p>另 <code>MinGW 6.3 C/C++</code> 对 Simulink Product Family
-的支持极其全面： - Simulink: For S-Function compilation - Simulink: For
-Model Referencing, Accelerator mode, Rapid Accelerator mode, and MATLAB
-Function blocks - <strong>Stateflow</strong>: For all features -
-<strong>Simulink Coder</strong>: For all features - Embedded Coder: When
-targeting the host OS - SerDes Toolbox: For IBIS-AMI model
-generation</p>
-<p><code>MinGW 6.3 C/C++</code> 对 MATLAB Compiler 的支持： - MATLAB
-Compiler: Excel add-in for desktop - MATLAB Compiler SDK: C/C++ - MATLAB
-Compiler SDK: COM &gt; 不支持MATLAB Compiler SDK: .NET（需要 Microsoft
-Visual C++）</p>
+的支持极其全面：</p>
+<ul>
+<li>Simulink: For S-Function compilation</li>
+<li>Simulink: For Model Referencing, Accelerator mode, Rapid Accelerator
+mode, and MATLAB Function blocks</li>
+<li><strong>Stateflow</strong>: For all features</li>
+<li><strong>Simulink Coder</strong>: For all features</li>
+<li>Embedded Coder: When targeting the host OS</li>
+<li>SerDes Toolbox: For IBIS-AMI model generation</li>
+</ul>
+<p><code>MinGW 6.3 C/C++</code> 对 MATLAB Compiler 的支持：</p>
+<ul>
+<li>MATLAB Compiler: Excel add-in for desktop</li>
+<li>MATLAB Compiler SDK: C/C++</li>
+<li>MATLAB Compiler SDK: COM</li>
+</ul>
+<blockquote>
+<p>不支持MATLAB Compiler SDK: .NET（需要 Microsoft Visual C++）</p>
+</blockquote>
 <p><code>MinGW 6.3 C/C++</code> 的下载链接引导到：<a
 target="_blank" rel="noopener" href="https://ww2.mathworks.cn/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-compiler">MATLAB
 Support for MinGW-w64 C/C++ Compiler</a></p>
@@ -418,7 +427,7 @@ it into the MATLAB Command Window to install.</p>
 <blockquote>
 <p>需登录Matlab账号验证，以在线下载所需资源。</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MATLAB Support for MinGW-w64 C/C++ Compiler 版本  22.1.0</span><br><span class="line">第三方软件:</span><br><span class="line">MinGW 6.3.0 from MinGW-w64.org</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MATLAB Support for MinGW-w64 C/C++ Compiler 版本  22.1.0</span><br><span class="line">第三方软件:</span><br><span class="line">MinGW 6.3.0 from MinGW-w64.org</span><br></pre></td></tr></table></figure>
 <p>This Add-On installs one of the following versions of MinGW GCC based
 on your version of MATLAB:</p>
 <table>
@@ -433,11 +442,13 @@ on your version of MATLAB:</p>
 <tr class="odd">
 <td>R2018b and later</td>
 <td>GCC 6.3</td>
-<td>http://mingw-w64.org</td>
+<td><a target="_blank" rel="noopener" href="http://mingw-w64.org"
+class="uri">http://mingw-w64.org</a></td>
 </tr>
 </tbody>
 </table>
-<p>完毕，命令行验证 OK。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; mex -setup</span><br><span class="line">MEX 配置为使用 <span class="string">&#x27;MinGW64 Compiler (C)&#x27;</span> 以进行 C 语言编译。</span><br><span class="line"></span><br><span class="line">要选择不同的语言，请从以下选项中选择一种命令:</span><br><span class="line"> mex -setup C++ </span><br><span class="line"> mex -setup FORTRAN</span><br></pre></td></tr></table></figure></p>
+<p>完毕，命令行验证 OK。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; mex -setup</span><br><span class="line">MEX 配置为使用 <span class="string">&#x27;MinGW64 Compiler (C)&#x27;</span> 以进行 C 语言编译。</span><br><span class="line"></span><br><span class="line">要选择不同的语言，请从以下选项中选择一种命令:</span><br><span class="line"> mex -setup C++ </span><br><span class="line"> mex -setup FORTRAN</span><br></pre></td></tr></table></figure>
 <h1 id="interfaces-to-other-languages">Interfaces to Other
 Languages</h1>
 <p>其他语言接口。</p>
@@ -455,21 +466,17 @@ MATLAB Compiler and MATLAB Compiler SDK 打包成其他语言的组件。</p>
 <p>支持语言包括：</p>
 <ul>
 <li>C - All versions prior to 11</li>
-<li>C - Version 11 （不支持从Matlab调用）<br />
-</li>
+<li>C - Version 11 （不支持从Matlab调用）</li>
 <li>C++ - All versions prior to 11</li>
 <li>C++ - Version 11</li>
 <li>C++ - Version 14</li>
-<li>Fortran - All versions<br />
-</li>
+<li>Fortran - All versions</li>
 <li>Python 2.7 | 3.7 | 3.8 | 3.9</li>
-<li>.COM components and apps - all versions<br />
-</li>
+<li>.COM components and apps - all versions</li>
 <li>Java 8 (Oracle Java)</li>
 <li>Java 8 (OpenJDK) （不支持从Matlab调用）</li>
 <li>.NET Framework CLR version 2.0 | 4.0 （不支持调用Matlab）</li>
-<li>HTTP 1.1 （不支持调用Matlab）<br />
-</li>
+<li>HTTP 1.1 （不支持调用Matlab）</li>
 <li>Perl 5.32.1（不支持调用Matlab）</li>
 </ul>
 <p>此外，Matlab Coder | Embedded Coder | Simulink Coder 支持将 Matlab |
@@ -552,14 +559,14 @@ Simulink 转换为其他语言代码。</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">187k</span>
+    <span title="Symbols count total">195k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">2:50</span>
+    <span title="Reading time total">2:58</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
